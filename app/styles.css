@@ -83,8 +83,8 @@ h1 {
   top: 0;
   z-index: 1000;
   background-color: var(--background-semi-transparent);
-  backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
 }
 
 .nav-inner-container {

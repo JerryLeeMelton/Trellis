@@ -1,6 +1,6 @@
 export default function NavBar() {
   return (
-    <nav className="nav-container" style={{ backdropFilter: "blur(12px)" }}>
+    <nav className="nav-container">
       <div className="nav-inner-container">
         <div className="nav-path-container">
           <p>
