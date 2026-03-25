@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export default function Blog() {
   return (
-    <section className="">
+    <section className="main-content-container">
       <h1>Blog</h1>
       <div className="blog-content-container">
         <p>

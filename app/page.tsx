@@ -6,7 +6,7 @@ import Image from "next/image"
 
 export default function Home() {
   return (
-    <div className="main-page-container">
+    <div className="main-content-container">
       {/* Intro Section ========================= */}
       <section className="intro-section-container">
         {/* Greeting */}

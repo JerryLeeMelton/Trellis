@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export default function Contact() {
   return (
-    <section className="">
+    <section className="main-content-container">
       <div className="contact-section-container">
         <h1>Contact</h1>
         <div>
