@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { Geist, Geist_Mono, Montserrat } from "next/font/google"
+import { Montserrat } from "next/font/google"
 import "./styles.css"
 import NavBar from "@/components/nav/NavBar"
 import Footer from "@/components/Footer"
@@ -23,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${montserrat.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col">
+      <body className="">
         <NavBar />
         {children}
         <Footer />

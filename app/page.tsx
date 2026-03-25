@@ -9,51 +9,67 @@ export default function Home() {
     <div className="main-page-container">
       {/* Intro Section ========================= */}
       <section className="intro-section-container">
+        {/* Greeting */}
         <div className="greeting-container">
           <div className="greeting-text-container">
+            <h2>Hello!</h2>
             <h1>
-              Hello! I'm{" "}
-              <span className="text-accent-main">Jerry Lee Melton</span>.
+              I'm <span className="text-accent-main">Jerry Lee Melton</span>.
             </h1>
             <h3>Full-Stack Developer based in Portland, Oregon. 🇺🇸</h3>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Accusamus, molestias? Asperiores minima veniam delectus rerum
-              quaerat eaque placeat rem ipsum nobis, omnis aliquam, magni est
-              voluptatum, eum alias nesciunt dignissimos. Asperiores minima
-              veniam delectus rerum quaerat eaque placeat rem ipsum nobis, omnis
-              aliquam, magni est voluptatum, eum alias nesciunt dignissimos.
-            </p>
           </div>
-          <div className="greeting-image-container">
-            <Image
-              src="/images/jerry_hero.jpg"
-              alt="Picture of Jerry Lee Melton"
-              width={300}
-              height={300}
-              className="intro-image"
-            />
+          {/* Intro text and hero image */}
+          <div className="intro-text-and-hero-image-container">
+            <div>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Accusamus, molestias? Asperiores minima veniam delectus rerum
+                quaerat eaque placeat rem ipsum nobis, omnis aliquam, magni est
+                voluptatum, eum alias nesciunt dignissimos. Asperiores minima
+                veniam delectus rerum quaerat eaque placeat rem ipsum nobis,
+                omnis aliquam, magni est voluptatum, eum alias nesciunt
+                dignissimos.
+              </p>
+            </div>
+            <div className="greeting-image-container">
+              <Image
+                src="/images/jerry_hero.jpg"
+                alt="Picture of Jerry Lee Melton"
+                width={300}
+                height={300}
+                className="intro-image"
+              />
+            </div>
           </div>
         </div>
-        {/* Resume and Social Links */}
+        {/* Resume, Social Links, About Link */}
         <div className="intro-social-links-container">
-          <div>
-            <SVGIcon name="resume" size={24} />
-            <button>Resume</button>
-          </div>
-          <div>
-            <button>
-              <SVGIcon name="github" size={24} /> Github
-            </button>
-          </div>
-          <div>
-            <button>
-              <SVGIcon name="linkedin" size={24} /> LinkedIn
-            </button>
-          </div>
-          <div>
-            <a href="/about">More about me...</a>
-          </div>
+          <a href="/resume" target="_blank" rel="noopener noreferrer">
+            <SVGIcon name="file" size={19} />
+            Resume
+          </a>
+          <span>|</span>
+          <a
+            href="https://github.com/jerrymelton"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <SVGIcon name="github" size={25} />
+            Github
+          </a>
+          <span>|</span>
+          <a
+            href="https://linkedin.com/in/jerrymelton"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <SVGIcon name="linkedin" size={22} />
+            LinkedIn
+          </a>
+          <span>|</span>
+          <a href="/about">
+            More about me <SVGIcon name="arrowRight" size={16} />
+          </a>
         </div>
       </section>
       <section className="skills-section-container">

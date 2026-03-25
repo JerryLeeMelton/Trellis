@@ -1,13 +1,12 @@
-/* Default Color Scheme v1.0 */
-/* :root {
-  --background: #313445;
-  --text-main: #c8d0f2;
-  --accent-main: #91c6be;
-} */
+/* Break Points?
+Mobile: max-width: 768px
+Tablet: 769px–1024px
+Desktop: 1025px+ */
 
 /* Default Color Scheme v2.0 */
 :root {
   --background: #2c3340;
+  --background-semi-transparent: #2c3340bb;
   --text-main: #d0c5eb;
   --accent-main: #81c7ad;
 }
@@ -16,6 +15,10 @@ body {
   background: var(--background);
   font-family: var(--font-montserrat), sans-serif;
   color: var(--text-main);
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  border: 0;
 }
 
 .text-accent-main {
@@ -23,9 +26,9 @@ body {
 }
 
 /* Smooooooth? */
-
-body {
-  padding: clamp(1rem, 3vw, 3rem);
+p {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  line-height: 2;
 }
 
 a {
@@ -35,18 +38,12 @@ a {
 }
 a:hover {
   color: var(--accent-main);
-  transition: color 0.3s ease;
+  transition: color 0.2s ease;
 }
 
 .svg-icon {
   fill: var(--text-main);
-  transition: fill 0.3s ease;
-}
-
-.nav-container {
-  max-width: 1200px;
-  width: 90%;
-  margin: 0 auto;
+  transition: fill 0.2s ease;
 }
 
 *,
@@ -64,14 +61,38 @@ h1 {
   font-size: clamp(1.5rem, 4vw, 3rem);
 }
 
+.opacity-80 {
+  opacity: 0.8;
+}
+.opacity-60 {
+  opacity: 0.6;
+}
+.opacity-40 {
+  opacity: 0.4;
+}
+
 /* Nav =================================== */
 .nav-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
   gap: 0.5rem;
+  width: 100%;
+  margin: 0 auto;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--background-semi-transparent);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.nav-inner-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
   max-width: 1200px;
+  width: 85%;
   margin: 0 auto;
 }
 
@@ -148,7 +169,21 @@ h1 {
 .intro-social-links-container {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  font-size: 1rem;
   gap: 1rem;
+}
+.intro-social-links-container a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.intro-text-and-hero-image-container {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
 }
 
 /* Featured Projects Section ============ */
@@ -167,4 +202,10 @@ h1 {
   border: 1px solid var(--accent-main);
   border-radius: 8px;
   padding: 1rem;
+}
+
+/* About Page ============================== */
+.about-content-container {
+  display: flex;
+  flex-direction: row;
 }

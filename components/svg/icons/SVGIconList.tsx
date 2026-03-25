@@ -15,7 +15,7 @@ export const svgIcons: Record<string, { viewBox: string; content: ReactNode }> =
       viewBox: "0 0 24 24",
       content: (
         <>
-          <g clip-path="url(#clip0)">
+          <g clipPath="url(#clip0)">
             <path
               d="M5.08057 0H6.1623V1.06875H7.15183V0H8.23361V3.23644H7.15188V2.15269H6.16235V3.23644H5.08061L5.08057 0Z"
               fill="currentColor"
@@ -264,6 +264,33 @@ export const svgIcons: Record<string, { viewBox: string; content: ReactNode }> =
           <path d="M16,8a2,2,0,1,0,2,2A2,2,0,0,0,16,8Zm0,3a1,1,0,1,1,1-1A1,1,0,0,1,16,11Z" />
           <path d="M20.67,15.2a5,5,0,0,0-9.34,0,4.46,4.46,0,0,0-.27,1.09,7.42,7.42,0,0,0,.94.64,8,8,0,0,0,8,0,7.42,7.42,0,0,0,.94-.64A4.46,4.46,0,0,0,20.67,15.2ZM16,17a7,7,0,0,1-3.83-1.14,4,4,0,0,1,7.66,0A7,7,0,0,1,16,17Z" />
           <path d="M20.67,15.2a6,6,0,0,1-.84.66,4,4,0,0,0-7.66,0,6,6,0,0,1-.84-.66,5,5,0,0,1,9.34,0Z" />
+        </>
+      ),
+    },
+    file: {
+      viewBox: "0 0 16 16",
+      content: (
+        <>
+          <path
+            d="M14.5 13.5V5.41a1 1 0 0 0-.3-.7L9.8.29A1 1 0 0 0 9.08 0H1.5v13.5A2.5 2.5 0 0 0 4 16h8a2.5 2.5 0 0 0 2.5-2.5m-1.5 0v-7H8v-5H3v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1M9.5 5V2.12L12.38 5zM5.13 5h-.62v1.25h2.12V5zm-.62 3h7.12v1.25H4.5zm.62 3h-.62v1.25h7.12V11z"
+            clipRule="evenodd"
+            fill="currentColor"
+            fillRule="evenodd"
+          />
+        </>
+      ),
+    },
+    arrowRight: {
+      viewBox: "0 0 20 20",
+      content: (
+        <>
+          <path
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M2 10h16m0 0l-7-7m7 7l-7 7"
+          />
         </>
       ),
     },
