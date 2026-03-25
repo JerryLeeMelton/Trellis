@@ -1,8 +1,8 @@
 import Image from "next/image"
 
-export default function Home() {
+export default function LatestPostsCard() {
   return (
-    <div className="featured-project-card-container">
+    <div className="latest-posts-card-container">
       <p>Latest Post Card</p>
     </div>
   )
