@@ -1,5 +1,7 @@
 import FeaturedProjectCard from "@/components/cards/FeaturedProjectCard"
 import LatestPostsCard from "@/components/cards/LatestPostsCard"
+import SkillsCard from "@/components/cards/SkillsCard"
+import SVGIcon from "@/components/svg/SVGIcon"
 import Image from "next/image"
 
 export default function Home() {
@@ -36,13 +38,18 @@ export default function Home() {
         {/* Resume and Social Links */}
         <div className="intro-social-links-container">
           <div>
+            <SVGIcon name="resume" size={24} />
             <button>Resume</button>
           </div>
           <div>
-            <button>GitHub</button>
+            <button>
+              <SVGIcon name="github" size={24} /> Github
+            </button>
           </div>
           <div>
-            <button>LinkedIn</button>
+            <button>
+              <SVGIcon name="linkedin" size={24} /> LinkedIn
+            </button>
           </div>
           <div>
             <a href="/about">More about me...</a>
@@ -50,14 +57,14 @@ export default function Home() {
         </div>
       </section>
       <section className="skills-section-container">
-        <div>Typescript</div>
-        <div>HTML 5</div>
-        <div>CSS</div>
-        <div>Golang</div>
-        <div>React</div>
-        <div>Next.js</div>
-        <div>PostgreSQL</div>
-        <div>Docker</div>
+        <SkillsCard name="typescript" />
+        <SkillsCard name="html5" />
+        <SkillsCard name="css" />
+        <SkillsCard name="golang" />
+        <SkillsCard name="react" />
+        <SkillsCard name="nextjs" />
+        <SkillsCard name="postgresql" />
+        <SkillsCard name="docker" />
       </section>
       <section className="featured-projects-section-container">
         <div>

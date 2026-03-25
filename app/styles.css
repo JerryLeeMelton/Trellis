@@ -38,6 +38,11 @@ a:hover {
   transition: color 0.3s ease;
 }
 
+.svg-icon {
+  fill: var(--text-main);
+  transition: fill 0.3s ease;
+}
+
 .nav-container {
   max-width: 1200px;
   width: 90%;
