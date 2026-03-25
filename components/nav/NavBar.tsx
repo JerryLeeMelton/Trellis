@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export default function NavBar() {
   return (
-    <nav>
+    <nav className="nav-container">
       <div className="nav-path-container">
         <p>
           /
@@ -11,8 +11,9 @@ export default function NavBar() {
           </a>
           /
         </p>
+        <span className="blinking-cursor"></span>
       </div>
-      <div>
+      <div className="nav-links-container">
         <ul>
           <li>
             <a href="/">Home</a>
