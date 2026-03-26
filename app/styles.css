@@ -90,6 +90,13 @@ h1 {
   min-height: 100%;
   margin: 0 auto;
   flex: 1;
+  padding-top: 4rem;
+}
+
+@media screen and (max-width: 768px) {
+  .main-content-container {
+    padding-top: 1rem;
+  }
 }
 
 /* Nav =================================== */
@@ -265,6 +272,14 @@ h1 {
 
 /* Featured Project Cards ============== */
 .featured-project-card-container {
+  background-color: var(--background);
+  border: 1px solid var(--accent-main);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+/* Projects Page Card ========================*/
+.project-card-container {
   background-color: var(--background);
   border: 1px solid var(--accent-main);
   border-radius: 8px;

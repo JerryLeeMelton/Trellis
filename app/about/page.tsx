@@ -17,7 +17,7 @@ export default function About() {
         </p>
         <div>
           <Image
-            src="/images/jerry_hero.jpg"
+            src="/images/placeholder.webp"
             alt="Picture of Jerry Lee Melton"
             width={300}
             height={300}
