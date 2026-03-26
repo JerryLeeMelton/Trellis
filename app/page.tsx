@@ -73,14 +73,14 @@ export default function Home() {
         </div>
       </section>
       <section className="skills-section-container">
-        <SkillsCard name="typescript" size={32} />
-        <SkillsCard name="html5" size={32} />
-        <SkillsCard name="css" size={32} />
-        <SkillsCard name="golang" size={32} />
-        <SkillsCard name="react" size={32} />
-        <SkillsCard name="nextjs" size={32} />
-        <SkillsCard name="postgresql" size={32} />
-        <SkillsCard name="docker" size={32} />
+        <SkillsCard name="typescript" size={26} />
+        <SkillsCard name="html5" size={26} />
+        <SkillsCard name="css" size={26} />
+        <SkillsCard name="golang" size={26} />
+        <SkillsCard name="react" size={26} />
+        <SkillsCard name="nextjs" size={26} />
+        <SkillsCard name="postgresql" size={26} />
+        <SkillsCard name="docker" size={26} />
       </section>
       <section className="featured-projects-section-container">
         <div>
