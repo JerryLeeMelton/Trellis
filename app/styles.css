@@ -7,11 +7,14 @@ Desktop: 1025px+ */
 :root {
   --background: #2c3340;
   --background-semi-transparent: #2c3340bb;
+  --background-darker: #1d222a;
   --text-main: #d0c5eb;
   --accent-main: #81c7ad;
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   background: var(--background);
   font-family: var(--font-montserrat), sans-serif;
   color: var(--text-main);
@@ -96,6 +99,15 @@ h1 {
   background-color: var(--background-semi-transparent);
   -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
+  transition: width 0.2s ease;
+}
+
+@media (max-width: 768px) {
+  .nav-container {
+    width: 100%;
+    transition: width 0.2s ease;
+    max-width: none;
+  }
 }
 
 .nav-inner-container {
@@ -165,6 +177,43 @@ h1 {
 .nav-links-container a:hover {
   color: var(--accent-main);
   transition: color 0.3s ease;
+}
+
+/* Footer =================================== */
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0;
+  margin-top: auto;
+  background-color: red;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.footer-inner-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 1.6rem;
+  font-size: 0.9rem;
+  gap: 0.5rem;
+  /* width: 80%; */
+  /* max-width: 30vw; */
+  width: 24rem;
+  border-radius: 80px;
+  margin: 0 auto;
+  background-color: var(--background-darker);
+  transition: width 0.2s ease;
+}
+
+@media (max-width: 768px) {
+  .footer-inner-container {
+    width: 90%;
+    transition: width 0.2s ease;
+    max-width: none;
+  }
 }
 
 /* Home Section ======================== */
