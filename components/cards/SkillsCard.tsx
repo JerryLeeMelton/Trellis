@@ -3,18 +3,10 @@ import SVGIcon from "../svg/SVGIcon"
 
 interface SkillsCardProps {
   name: string
+  size: number
 }
 
-// Typescript
-// HTML 5
-// CSS
-// Golang
-// React
-// Next.js
-// PostgreSQL
-// Docker
-
-export default function SkillsCard({ name }: SkillsCardProps) {
+export default function SkillsCard({ name, size }: SkillsCardProps) {
   let displayName = ""
 
   switch (name) {
@@ -48,7 +40,7 @@ export default function SkillsCard({ name }: SkillsCardProps) {
 
   return (
     <div className="skills-card-container">
-      <SVGIcon name={name} size={48} />
+      <SVGIcon name={name} size={size} />
       <p>{displayName}</p>
     </div>
   )

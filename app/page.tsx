@@ -48,39 +48,39 @@ export default function Home() {
             <SVGIcon name="file" size={19} />
             Resume
           </a>
-          <span>|</span>
+          <span className="opacity-40">|</span>
           <a
-            href="https://github.com/jerrymelton"
+            href="https://github.com/JerryLeeMelton"
             target="_blank"
             rel="noopener noreferrer"
           >
             <SVGIcon name="github" size={25} />
             Github
           </a>
-          <span>|</span>
+          <span className="opacity-40">|</span>
           <a
-            href="https://linkedin.com/in/jerrymelton"
+            href="https://www.linkedin.com/in/jerryleemelton/"
             target="_blank"
             rel="noopener noreferrer"
           >
             <SVGIcon name="linkedin" size={22} />
             LinkedIn
           </a>
-          <span>|</span>
+          <span className="opacity-40">|</span>
           <a href="/about">
             More about me <SVGIcon name="arrowRight" size={16} />
           </a>
         </div>
       </section>
       <section className="skills-section-container">
-        <SkillsCard name="typescript" />
-        <SkillsCard name="html5" />
-        <SkillsCard name="css" />
-        <SkillsCard name="golang" />
-        <SkillsCard name="react" />
-        <SkillsCard name="nextjs" />
-        <SkillsCard name="postgresql" />
-        <SkillsCard name="docker" />
+        <SkillsCard name="typescript" size={32} />
+        <SkillsCard name="html5" size={32} />
+        <SkillsCard name="css" size={32} />
+        <SkillsCard name="golang" size={32} />
+        <SkillsCard name="react" size={32} />
+        <SkillsCard name="nextjs" size={32} />
+        <SkillsCard name="postgresql" size={32} />
+        <SkillsCard name="docker" size={32} />
       </section>
       <section className="featured-projects-section-container">
         <div>

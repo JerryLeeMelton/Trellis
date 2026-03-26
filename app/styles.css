@@ -9,6 +9,7 @@ Desktop: 1025px+ */
   --background-semi-transparent: #2c3340bb;
   --background-darker: #1d222a;
   --text-main: #d0c5eb;
+  --text-main-semi-transparent: #d0c5eb40;
   --accent-main: #81c7ad;
 }
 
@@ -262,6 +263,44 @@ h1 {
   border: 1px solid var(--accent-main);
   border-radius: 8px;
   padding: 1rem;
+}
+
+/* Skills Cards ============== */
+.skills-section-container {
+  max-width: 80%;
+  margin: 2rem auto;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  cursor: default;
+}
+
+.skills-card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  background-color: var(--background);
+  border: 1px solid var(--text-main-semi-transparent);
+  line-height: 0;
+  border-radius: 8px;
+  padding: 1rem;
+  aspect-ratio: 1 / 1;
+}
+.skills-card-container p {
+  font-size: 0.75rem;
+  margin-top: 1rem;
+  line-height: 0;
+}
+
+.skills-card-container:hover,
+.skills-card-container:hover svg,
+.skills-card-container:hover p {
+  border-color: var(--accent-main);
+  color: var(--accent-main);
+  transition: border-color 0.2s ease;
 }
 
 /* About Page ============================== */
