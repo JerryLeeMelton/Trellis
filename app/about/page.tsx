@@ -1,11 +1,18 @@
 import SVGIcon from "@/components/svg/SVGIcon"
 import Image from "next/image"
+import {
+  AnimDiv,
+  AnimPage,
+} from "@/components/animationComponents/AnimatedComponents"
 
 export default function About() {
   return (
-    <section className="main-content-container">
-      <h1>About Me</h1>
-      <div className="about-content-container">
+    <AnimPage className="main-content-container">
+      <AnimDiv>
+        <h1>About Me</h1>
+      </AnimDiv>
+
+      <AnimDiv className="about-content-container">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur
           blanditiis optio esse maxime ad aut, consequatur quisquam autem rerum
@@ -24,8 +31,8 @@ export default function About() {
             className="intro-image"
           />
         </div>
-      </div>
-      <div className="about-social-links-container">
+      </AnimDiv>
+      <AnimDiv className="about-social-links-container">
         <a href="/resume" target="_blank" rel="noopener noreferrer">
           <SVGIcon name="file" size={19} />
           Resume
@@ -44,12 +51,12 @@ export default function About() {
         <a href="/about">
           More about me <SVGIcon name="arrowRight" size={16} />
         </a>
-      </div>
+      </AnimDiv>
 
-      <div>
+      <AnimDiv>
         <h2>Cat Pics!</h2>
-      </div>
-      <div className="about-content-container">
+      </AnimDiv>
+      <AnimDiv className="about-content-container">
         <div className="cat-pics-container">
           <Image
             src="/images/cat1.jpg"
@@ -73,7 +80,7 @@ export default function About() {
             className="cat-image"
           />
         </div>
-      </div>
-    </section>
+      </AnimDiv>
+    </AnimPage>
   )
 }

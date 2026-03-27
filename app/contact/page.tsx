@@ -2,6 +2,10 @@
 import Image from "next/image"
 import { useState } from "react"
 import dynamic from "next/dynamic"
+import {
+  AnimDiv,
+  AnimPage,
+} from "@/components/animationComponents/AnimatedComponents"
 
 const PortlandMap = dynamic(() => import("../../components/PortlandMap"), {
   ssr: false,
@@ -16,15 +20,17 @@ export default function Contact() {
   const isDisabled = !name || !email || !message
 
   return (
-    <section className="main-content-container">
+    <AnimPage className="main-content-container">
       <div className="contact-section-container">
-        <h1>Contact</h1>
-        <div className="contact-map-wrapper">
+        <AnimDiv>
+          <h1>Contact</h1>
+        </AnimDiv>
+        <AnimDiv className="contact-map-wrapper">
           <PortlandMap />
-        </div>
+        </AnimDiv>
 
         <div className="contact-form-container">
-          <div className="contact-form-input-container">
+          <AnimDiv className="contact-form-input-container">
             <input
               type="text"
               id="name"
@@ -39,16 +45,16 @@ export default function Contact() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
-          </div>
-          <div className="contact-form-textarea-container">
+          </AnimDiv>
+          <AnimDiv className="contact-form-textarea-container">
             <textarea
               id="message"
               placeholder="Your message here..."
               value={message}
               onChange={(e) => setMessage(e.target.value)}
             />
-          </div>
-          <div className="contact-form-submit-button-container">
+          </AnimDiv>
+          <AnimDiv className="contact-form-submit-button-container">
             <button
               className="contact-form-submit-button"
               type="submit"
@@ -56,9 +62,9 @@ export default function Contact() {
             >
               Send Message
             </button>
-          </div>
+          </AnimDiv>
         </div>
       </div>
-    </section>
+    </AnimPage>
   )
 }

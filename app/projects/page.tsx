@@ -1,20 +1,24 @@
+import {
+  AnimDiv,
+  AnimPage,
+} from "@/components/animationComponents/AnimatedComponents"
 import ProjectCard from "@/components/cards/ProjectCard"
 import Image from "next/image"
 
 export default function Projects() {
   return (
-    <section className="main-content-container">
-      <div className="">
+    <AnimPage className="main-content-container">
+      <AnimDiv className="">
         <h1>My Projects</h1>
-      </div>
+      </AnimDiv>
       <div className="projects-content-container">
-        <div className="project-cards">
+        <AnimDiv className="project-cards">
           <ProjectCard projectName="testProject" />
           <ProjectCard projectName="testProject" />
           <ProjectCard projectName="testProject" />
           <ProjectCard projectName="testProject" />
-        </div>
+        </AnimDiv>
       </div>
-    </section>
+    </AnimPage>
   )
 }

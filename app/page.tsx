@@ -1,3 +1,11 @@
+import {
+  AnimDiv,
+  AnimH1,
+  AnimH2,
+  AnimH3,
+  AnimP,
+  AnimPage,
+} from "@/components/animationComponents/AnimatedComponents"
 import FeaturedProjectCard from "@/components/cards/FeaturedProjectCard"
 import LatestPostsCard from "@/components/cards/LatestPostsCard"
 import SkillsCard from "@/components/cards/SkillsCard"
@@ -6,22 +14,22 @@ import Image from "next/image"
 
 export default function Home() {
   return (
-    <div className="main-content-container">
+    <AnimPage className="main-content-container">
       {/* Intro Section ========================= */}
       <section className="intro-section-container">
         {/* Greeting */}
         <div className="greeting-container">
           <div className="greeting-text-container">
-            <h2>Hello!</h2>
-            <h1>
+            <AnimH2>Hello!</AnimH2>
+            <AnimH1>
               I'm <span className="text-accent-main">Jerry Lee Melton</span>.
-            </h1>
-            <h3>Full-Stack Developer based in Portland, Oregon. 🇺🇸</h3>
+            </AnimH1>
+            <AnimH3>Full-Stack Developer based in Portland, Oregon. 🇺🇸</AnimH3>
           </div>
           {/* Intro text and hero image */}
           <div className="intro-text-and-hero-image-container">
             <div>
-              <p>
+              <AnimP>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                 Accusamus, molestias? Asperiores minima veniam delectus rerum
                 quaerat eaque placeat rem ipsum nobis, omnis aliquam, magni est
@@ -29,9 +37,9 @@ export default function Home() {
                 veniam delectus rerum quaerat eaque placeat rem ipsum nobis,
                 omnis aliquam, magni est voluptatum, eum alias nesciunt
                 dignissimos.
-              </p>
+              </AnimP>
             </div>
-            <div className="greeting-image-container">
+            <AnimDiv className="greeting-image-container">
               <Image
                 // src="/images/jerry_hero.jpg"
                 src="/images/placeholder.webp"
@@ -40,11 +48,11 @@ export default function Home() {
                 height={300}
                 className="intro-image"
               />
-            </div>
+            </AnimDiv>
           </div>
         </div>
         {/* Resume, Social Links, About Link */}
-        <div className="intro-social-links-container">
+        <AnimDiv className="intro-social-links-container">
           <a href="/resume" target="_blank" rel="noopener noreferrer">
             <SVGIcon name="file" size={19} />
             Resume
@@ -71,9 +79,9 @@ export default function Home() {
           <a href="/about">
             More about me <SVGIcon name="arrowRight" size={16} />
           </a>
-        </div>
+        </AnimDiv>
       </section>
-      <section className="skills-section-container">
+      <AnimDiv className="skills-section-container">
         <SkillsCard name="typescript" size={26} />
         <SkillsCard name="html5" size={26} />
         <SkillsCard name="css" size={26} />
@@ -82,37 +90,37 @@ export default function Home() {
         <SkillsCard name="nextjs" size={26} />
         <SkillsCard name="postgresql" size={26} />
         <SkillsCard name="docker" size={26} />
-      </section>
+      </AnimDiv>
       <section className="featured-projects-section-container">
         <div>
-          <div>
+          <AnimDiv>
             <h2>Featured Projects</h2>
-          </div>
-          <div>
+          </AnimDiv>
+          <AnimDiv>
             <a href="/projects">View All...</a>
-          </div>
+          </AnimDiv>
         </div>
-        <div className="featured-projects-cards-container">
+        <AnimDiv className="featured-projects-cards-container">
           <FeaturedProjectCard />
 
           <FeaturedProjectCard />
-        </div>
+        </AnimDiv>
       </section>
       <section className="featured-projects-section-container">
-        <div>
+        <AnimDiv>
           <div>
             <h2>Latest Posts</h2>
           </div>
           <div>
             <a href="/projects">View All...</a>
           </div>
-        </div>
-        <div className="featured-projects-cards-container">
+        </AnimDiv>
+        <AnimDiv className="featured-projects-cards-container">
           <LatestPostsCard />
 
           <LatestPostsCard />
-        </div>
+        </AnimDiv>
       </section>
-    </div>
+    </AnimPage>
   )
 }
