@@ -1,5 +1,8 @@
 import Image from "next/image"
 import { projectCardData } from "./projectCardData/ProjectCardData"
+import SVGIcon from "../svg/SVGIcon"
+import Tag from "../tags/Tag"
+import TagElement from "./TagElement"
 
 interface ProjectCardProps {
   projectName: string
@@ -22,9 +25,13 @@ export default function ProjectCard({ projectName }: ProjectCardProps) {
       <div>
         <h3>{projectData.title}</h3>
         <p>{projectData.description}</p>
-        <p>
-          <strong>Technologies Used:</strong> {projectData.tags.join(", ")}
-        </p>
+
+        <div className="project-card-tags-container">
+          <SVGIcon name="tag" size={22} />
+          {projectData.tags.map((tag) => (
+            <TagElement key={tag} tagName={tag} />
+          ))}
+        </div>
       </div>
     </div>
   )

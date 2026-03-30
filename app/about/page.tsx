@@ -47,10 +47,6 @@ export default function About() {
           <SVGIcon name="linkedin" size={22} />
           LinkedIn
         </a>
-        <span>|</span>
-        <a href="/about">
-          More about me <SVGIcon name="arrowRight" size={16} />
-        </a>
       </AnimDiv>
 
       <AnimDiv>

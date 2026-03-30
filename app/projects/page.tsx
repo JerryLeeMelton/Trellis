@@ -14,8 +14,14 @@ export default function Projects() {
       <div className="projects-content-container">
         <AnimDiv className="project-cards">
           <ProjectCard projectName="testProject" />
+        </AnimDiv>
+        <AnimDiv className="project-cards">
           <ProjectCard projectName="testProject" />
+        </AnimDiv>
+        <AnimDiv className="project-cards">
           <ProjectCard projectName="testProject" />
+        </AnimDiv>
+        <AnimDiv className="project-cards">
           <ProjectCard projectName="testProject" />
         </AnimDiv>
       </div>

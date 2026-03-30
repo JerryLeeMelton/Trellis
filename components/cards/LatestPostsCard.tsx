@@ -1,5 +1,3 @@
-import Image from "next/image"
-
 export default function LatestPostsCard() {
   return (
     <div className="latest-posts-card-container">
