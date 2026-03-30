@@ -19,7 +19,11 @@ export default function TagElement({ tagName }: TagElementProps) {
     <div>
       <span
         className={`project-card-tag project-card-tag-${tagName}`}
-        style={{ backgroundColor: tagColors[tagName] || "#ccc" }}
+        style={{
+          color: tagColors[tagName] || "#ccc",
+          backgroundColor: "#384152",
+          fontWeight: "bold",
+        }}
       >
         {tagName}
       </span>
