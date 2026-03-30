@@ -307,6 +307,13 @@ h1 {
   font-size: 0.9rem;
 }
 
+.project-card-tag {
+  background-color: var(--accent-main);
+  color: var(--background);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
+
 /* Skills Cards ------------------------------ */
 .skills-section-container {
   max-width: 80%;
