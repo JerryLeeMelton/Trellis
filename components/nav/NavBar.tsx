@@ -4,7 +4,7 @@ export default function NavBar() {
       <div className="nav-inner-container">
         <div className="nav-path-container">
           <p>
-            /
+            ~ /
             <a href="/" className="nav-path-link">
               jerry
             </a>
