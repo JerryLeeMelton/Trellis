@@ -9,7 +9,7 @@ import {
 
 const PortlandMap = dynamic(() => import("../../components/PortlandMap"), {
   ssr: false,
-  loading: () => <div style={{ height: "400px", background: "#1a1a2e" }} />,
+  loading: () => <div style={{ height: "250px", background: "#1d222a" }} />,
 })
 
 export default function Contact() {
