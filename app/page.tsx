@@ -45,7 +45,7 @@ export default function Home() {
                 alt="Picture of Jerry Lee Melton"
                 width={300}
                 height={300}
-                className="intro-image"
+                className="intro-image img-zoom"
               />
             </AnimDiv>
           </div>

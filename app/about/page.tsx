@@ -13,22 +13,25 @@ export default function About() {
       </AnimDiv>
 
       <AnimDiv className="about-content-container">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur
-          blanditiis optio esse maxime ad aut, consequatur quisquam autem rerum
-          delectus. Natus, dolorum? Animi dolor sunt et ut recusandae! Animi,
-          nesciunt? Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          Consequuntur blanditiis optio esse maxime ad aut, consequatur quisquam
-          autem rerum delectus. Natus, dolorum? Animi dolor sunt et ut
-          recusandae! Animi, nesciunt?
-        </p>
-        <div>
+        <div className="about-text-container">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Consequuntur blanditiis optio esse maxime ad aut, consequatur
+            quisquam autem rerum delectus. Natus, dolorum? Animi dolor sunt et
+            ut recusandae! Animi, nesciunt? Lorem ipsum dolor sit amet,
+            consectetur adipisicing elit. Consequuntur blanditiis optio esse
+            maxime ad aut, consequatur quisquam autem rerum delectus. Natus,
+            dolorum? Animi dolor sunt et ut recusandae! Animi, nesciunt?
+          </p>
+        </div>
+
+        <div className="about-image-container">
           <Image
             src="/images/jerry_about_fullSize.webp"
             alt="Picture of Jerry Lee Melton"
-            width={300}
-            height={300}
-            className="intro-image"
+            width={600}
+            height={600}
+            className="about-image img-zoom"
           />
         </div>
       </AnimDiv>
@@ -59,7 +62,7 @@ export default function About() {
             alt="Hank"
             width={300}
             height={300}
-            className="cat-image"
+            className="cat-image img-zoom"
           />
           <p>Hank</p>
         </div>
@@ -69,7 +72,7 @@ export default function About() {
             alt="Josie"
             width={300}
             height={300}
-            className="cat-image"
+            className="cat-image img-zoom"
           />
           <p>Josie</p>
         </div>
@@ -79,7 +82,7 @@ export default function About() {
             alt="Dorian"
             width={300}
             height={300}
-            className="cat-image"
+            className="cat-image img-zoom"
           />
           <p>Dorian</p>
         </div>
