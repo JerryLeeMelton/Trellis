@@ -12,7 +12,7 @@ Desktop: 1025px+ */
   --text-main-semi-transparent: #d0c5eb40;
   --accent-main: #81c7ad;
 
-  /* --default-border-radius: 4px; */
+  --default-border-radius: 8px;
 }
 
 body {
@@ -45,6 +45,10 @@ a {
 a:hover {
   color: var(--accent-main);
   transition: color 0.2s ease;
+}
+
+img {
+  border-radius: var(--default-border-radius);
 }
 
 .svg-icon {
@@ -274,7 +278,7 @@ h1 {
 .featured-project-card-container {
   background-color: var(--background);
   border: 1px solid var(--accent-main);
-  border-radius: 8px;
+  border-radius: var(--default-border-radius);
   padding: 1rem;
 }
 
@@ -291,7 +295,7 @@ h1 {
 .project-card-container {
   background-color: var(--background);
   border: 1px solid var(--accent-main);
-  border-radius: 8px;
+  border-radius: var(--default-border-radius);
   padding: 1rem;
 }
 .project-card-container p {
@@ -311,7 +315,7 @@ h1 {
   background-color: var(--accent-main);
   color: var(--background);
   padding: 0.2rem 0.5rem;
-  border-radius: 4px;
+  border-radius: var(--default-border-radius);
 }
 
 /* Skills Cards ------------------------------ */
@@ -342,7 +346,7 @@ h1 {
   background-color: var(--background);
   border: 1px solid var(--text-main-semi-transparent);
   line-height: 0;
-  border-radius: 8px;
+  border-radius: var(--default-border-radius);
   padding: 0.8rem;
   aspect-ratio: 1 / 1;
 }
@@ -360,10 +364,49 @@ h1 {
   transition: border-color 0.2s ease;
 }
 
-/* About Page ============================== */
+/* About Page =============================================== */
 .about-content-container {
   display: flex;
   flex-direction: row;
+}
+
+.about-social-links-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 1rem;
+  gap: 1rem;
+}
+.about-social-links-container a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cat-pics-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.cat-pics-container div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cat-pics-container p {
+  line-height: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .cat-pics-container {
+    flex-direction: column;
+    /* gap: 2rem; */
+
+    transition: all 0.2s ease;
+  }
 }
 
 /* Contact Page ============================== */
@@ -402,7 +445,7 @@ h1 {
   /* flex: 1; */
   padding: 0.5rem;
   border: 1px solid var(--text-main-semi-transparent);
-  border-radius: 4px;
+  border-radius: var(--default-border-radius);
   background-color: var(--background);
   color: var(--text-main);
 }
@@ -410,7 +453,7 @@ h1 {
   flex: 1;
   padding: 0.5rem;
   border: 1px solid var(--text-main-semi-transparent);
-  border-radius: 4px;
+  border-radius: var(--default-border-radius);
   background-color: var(--background);
   color: var(--text-main);
   line-height: 1.1rem;
@@ -442,7 +485,7 @@ input:focus {
   color: var(--background);
   background-color: var(--text-main);
   border: 1px solid var(--text-main);
-  border-radius: 4px;
+  border-radius: var(--default-border-radius);
   padding: 0.5rem 1rem;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -486,7 +529,7 @@ input:focus {
   position: relative;
   width: 100%;
   height: 250px;
-  border-radius: 4px;
+  border-radius: var(--default-border-radius);
   overflow: hidden;
   border: 1px solid #d0c5eb20;
   box-shadow:
@@ -501,7 +544,7 @@ input:focus {
   mix-blend-mode: color;
   pointer-events: none;
   z-index: 1000;
-  border-radius: 4px;
+  border-radius: var(--default-border-radius);
 }
 
 /* Leaflet overrides */

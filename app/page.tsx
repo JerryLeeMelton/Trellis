@@ -41,8 +41,7 @@ export default function Home() {
             </div>
             <AnimDiv className="greeting-image-container">
               <Image
-                // src="/images/jerry_hero.jpg"
-                src="/images/placeholder.webp"
+                src="/images/jerry_hero_fullSize.webp"
                 alt="Picture of Jerry Lee Melton"
                 width={300}
                 height={300}

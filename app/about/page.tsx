@@ -24,7 +24,7 @@ export default function About() {
         </p>
         <div>
           <Image
-            src="/images/placeholder.webp"
+            src="/images/jerry_about_fullSize.webp"
             alt="Picture of Jerry Lee Melton"
             width={300}
             height={300}
@@ -52,29 +52,36 @@ export default function About() {
       <AnimDiv>
         <h2>Cat Pics!</h2>
       </AnimDiv>
-      <AnimDiv className="about-content-container">
-        <div className="cat-pics-container">
+      <AnimDiv className="cat-pics-container">
+        <div>
           <Image
-            src="/images/cat1.jpg"
+            src="/images/hank_001_fullSize.webp"
             alt="Hank"
             width={300}
             height={300}
             className="cat-image"
           />
+          <p>Hank</p>
+        </div>
+        <div>
           <Image
-            src="/images/cat2.jpg"
+            src="/images/josie_001_fullSize.webp"
             alt="Josie"
             width={300}
             height={300}
             className="cat-image"
           />
+          <p>Josie</p>
+        </div>
+        <div>
           <Image
-            src="/images/cat3.jpg"
+            src="/images/dorian_001_fullSize.webp"
             alt="Dorian"
             width={300}
             height={300}
             className="cat-image"
           />
+          <p>Dorian</p>
         </div>
       </AnimDiv>
     </AnimPage>
