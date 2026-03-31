@@ -16,8 +16,36 @@ export default function Contact() {
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
   const [message, setMessage] = useState("")
+  const [status, setStatus] = useState("")
 
   const isDisabled = !name || !email || !message
+
+  async function handleSubmit() {
+    setStatus("sending")
+
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ name, email, message }),
+    })
+
+    if (res.ok) {
+      setStatus("sent")
+      setName("")
+      setEmail("")
+      setMessage("")
+    } else {
+      setStatus("error")
+    }
+
+    try {
+    } catch (err) {
+      console.error(err)
+      setStatus("error")
+    }
+  }
 
   return (
     <AnimPage className="main-content-container">
@@ -59,8 +87,9 @@ export default function Contact() {
               className="contact-form-submit-button"
               type="submit"
               disabled={isDisabled}
+              onClick={handleSubmit}
             >
-              Send Message
+              {status === "sending" ? "Sending" : "Send Message"}
             </button>
           </AnimDiv>
         </div>
