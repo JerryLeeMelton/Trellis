@@ -1,5 +1,4 @@
 "use client"
-import Image from "next/image"
 import { useState } from "react"
 import dynamic from "next/dynamic"
 import {
@@ -18,32 +17,61 @@ export default function Contact() {
   const [message, setMessage] = useState("")
   const [status, setStatus] = useState("")
 
+  const isValidEmail = (value: string) =>
+    /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)
   const isDisabled = !name || !email || !message
 
   async function handleSubmit() {
+    if (!isValidEmail(email)) {
+      setStatus("invalidemail")
+      return
+    }
     setStatus("sending")
 
-    const res = await fetch("/api/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ name, email, message }),
-    })
-
-    if (res.ok) {
-      setStatus("sent")
-      setName("")
-      setEmail("")
-      setMessage("")
-    } else {
-      setStatus("error")
-    }
-
     try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ name, email, message }),
+      })
+
+      if (res.ok) {
+        setStatus("sent")
+        setName("")
+        setEmail("")
+        setMessage("")
+      } else {
+        setStatus("error")
+      }
     } catch (err) {
       console.error(err)
       setStatus("error")
+    }
+  }
+
+  function renderStatusMessage(status: string) {
+    const cssClass: string = "contact-form-message"
+    switch (status) {
+      case "sent":
+        return (
+          <div className={cssClass}>
+            Message sent! I'll get back to you as soon as I can!
+          </div>
+        )
+      case "invalidemail":
+        return (
+          <div className={cssClass}>Please enter a valid email address.</div>
+        )
+      case "error":
+        return (
+          <div className={cssClass}>
+            Something went wrong. Please try again.
+          </div>
+        )
+      default:
+        return null
     }
   }
 
@@ -86,11 +114,12 @@ export default function Contact() {
             <button
               className="contact-form-submit-button"
               type="submit"
-              disabled={isDisabled}
+              disabled={isDisabled || status === "sending"}
               onClick={handleSubmit}
             >
               {status === "sending" ? "Sending" : "Send Message"}
             </button>
+            {renderStatusMessage(status)}
           </AnimDiv>
         </div>
       </div>

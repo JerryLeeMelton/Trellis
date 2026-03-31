@@ -384,6 +384,7 @@ h1 {
   flex-direction: row;
   justify-content: space-between;
   gap: 2rem;
+  margin-bottom: 4rem;
 }
 .about-text-container {
   display: flex;
@@ -479,6 +480,7 @@ h1 {
   width: 80%;
   min-height: 100%;
   margin: 0 auto;
+  margin-bottom: 2rem;
   flex: 1;
   transition: width 0.2s ease;
 }
@@ -489,7 +491,7 @@ h1 {
   gap: 1rem;
 }
 .contact-form-container div {
-  flex-direction: row;
+  /* flex-direction: row; */
   gap: 0.5rem;
 }
 .contact-form-input-container {
@@ -529,7 +531,19 @@ input:focus {
 
 .contact-form-submit-button-container {
   display: flex;
-  justify-content: flex-end;
+  flex-direction: row;
+  justify-content: space-between;
+  /* justify-content: flex-end; */
+}
+.contact-form-submit-button-container button,
+.contact-form-submit-button-container div {
+  display: flex;
+}
+
+@media screen and (max-width: 1000px) {
+  .contact-form-submit-button-container {
+    flex-direction: column;
+  }
 }
 
 .contact-form-submit-button {
