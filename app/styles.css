@@ -420,6 +420,8 @@ h1 {
   flex-direction: row;
   align-items: center;
   font-size: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   gap: 1rem;
 }
 .about-social-links-container a {
@@ -427,6 +429,19 @@ h1 {
   flex-direction: row;
   align-items: center;
   gap: 0.5rem;
+}
+
+@media screen and (max-width: 950px) {
+  .about-content-container {
+    flex-direction: column-reverse;
+  }
+  .about-image-container {
+    flex: 1 1 100%;
+    padding-left: 0;
+  }
+  .about-text-container {
+    flex: 1 1 100%;
+  }
 }
 
 .cat-pics-container {

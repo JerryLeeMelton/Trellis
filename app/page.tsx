@@ -105,7 +105,7 @@ export default function Home() {
           <FeaturedProjectCard />
         </AnimDiv>
       </section>
-      <section className="featured-projects-section-container">
+      {/* <section className="featured-posts-section-container">
         <AnimDiv>
           <div>
             <h2>Latest Posts</h2>
@@ -119,7 +119,7 @@ export default function Home() {
 
           <LatestPostsCard />
         </AnimDiv>
-      </section>
+      </section> */}
     </AnimPage>
   )
 }
