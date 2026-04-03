@@ -361,7 +361,7 @@ h1 {
   justify-content: center;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
+  gap: 2.4rem;
   cursor: default;
 }
 
