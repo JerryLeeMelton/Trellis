@@ -300,21 +300,34 @@ h1 {
 
 .projects-content-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   max-width: 1100px;
 }
 
-/* Projects Page Card ----------------------- */
+@media screen and (max-width: 768px) {
+  .projects-content-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* (Main) Projects Page Card ----------------------- */
 .project-card-container {
   background-color: var(--background);
-  border: 1px solid var(--accent-main);
+  border: 1px solid var(--text-main-semi-transparent);
   border-radius: var(--default-border-radius);
   padding: 1rem;
 }
 .project-card-container p {
   font-size: 0.9rem;
   line-height: 1.5rem;
+}
+
+.project-card-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--default-border-radius);
 }
 
 .project-card-tags-container {

@@ -1,7 +1,6 @@
 import Image from "next/image"
 import { projectCardData } from "./projectCardData/ProjectCardData"
 import SVGIcon from "../svg/SVGIcon"
-import Tag from "../tags/Tag"
 import TagElement from "./TagElement"
 
 interface ProjectCardProps {
@@ -19,6 +18,7 @@ export default function ProjectCard({ projectName }: ProjectCardProps) {
           alt={`Image for ${projectName}`}
           width={400}
           height={200}
+          sizes="(max-width: 768px) 100vw, 50vw"
           className="project-card-image"
         />
       </div>
