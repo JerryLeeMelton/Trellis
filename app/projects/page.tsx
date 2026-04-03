@@ -13,7 +13,7 @@ export default function Projects() {
       </AnimDiv>
       <div className="projects-content-container">
         <AnimDiv className="project-cards">
-          <ProjectCard projectName="testProject" />
+          <ProjectCard projectName="polygonAi" />
         </AnimDiv>
         <AnimDiv className="project-cards">
           <ProjectCard projectName="testProject" />

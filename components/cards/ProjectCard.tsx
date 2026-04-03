@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 import { projectCardData } from "./projectCardData/ProjectCardData"
 import SVGIcon from "../svg/SVGIcon"
 import TagElement from "./TagElement"
@@ -11,7 +12,7 @@ export default function ProjectCard({ projectName }: ProjectCardProps) {
   const projectData = projectCardData[projectName]
 
   return (
-    <div className="project-card-container">
+    <Link href={`/projects/${projectName}`} className="project-card-container project-card-link">
       <div>
         <Image
           src="/images/placeholder.webp"
@@ -33,6 +34,6 @@ export default function ProjectCard({ projectName }: ProjectCardProps) {
           ))}
         </div>
       </div>
-    </div>
+    </Link>
   )
 }
