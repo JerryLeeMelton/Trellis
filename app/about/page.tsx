@@ -29,7 +29,11 @@ export default function About() {
               Resume
             </a>
             <span>|</span>
-            <a href="https://github.com/JerryLeeMelton" target="_blank">
+            <a
+              href="https://github.com/JerryLeeMelton"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <SVGIcon name="github" size={25} />
               Github
             </a>
@@ -37,6 +41,7 @@ export default function About() {
             <a
               href="https://www.linkedin.com/in/jerryleemelton/"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <SVGIcon name="linkedin" size={22} />
               LinkedIn
