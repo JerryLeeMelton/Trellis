@@ -342,20 +342,51 @@ h4 {
 /* Featured Projects Section ============ */
 .featured-projects-section-container {
   margin: 2rem auto;
+  width: 100%;
 }
 .featured-projects-cards-container {
   display: flex;
   flex-direction: row;
+  align-items: stretch;
   gap: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .featured-projects-cards-container {
+    flex-direction: column;
+  }
+  .featured-project-card-container h3 {
+    font-size: 1.25rem;
+  }
 }
 
 /* Featured Project Cards ------------------- */
 .featured-project-card-container {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
   background-color: var(--background);
-  border: 1px solid var(--accent-main);
+  border: 1px solid var(--text-main-semi-transparent);
   border-radius: var(--default-border-radius);
   padding: 1rem;
   box-shadow: var(--card-shadow);
+  transition: border-color 0.2s ease;
+}
+.featured-project-card-container:hover {
+  border-color: var(--accent-main);
+  color: inherit;
+}
+.featured-project-card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.featured-project-card-container p {
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  flex: 1;
+  margin-bottom: 0;
 }
 
 /* Projects Page ================================================== */

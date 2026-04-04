@@ -1,8 +1,6 @@
 import {
   AnimDiv,
   AnimH1,
-  AnimH2,
-  AnimH3,
   AnimH4,
   AnimP,
   AnimPage,
@@ -20,7 +18,6 @@ export default function Home() {
       <section className="intro-section-container">
         <div className="intro-text-and-hero-image-container">
           <div className="intro-text-container">
-            {/* <AnimH2>Hello!</AnimH2> */}
             <AnimH1>
               Hello! I'm <span className="text-accent-main">Jerry</span>.
             </AnimH1>
@@ -68,6 +65,21 @@ export default function Home() {
           </AnimDiv>
         </div>
       </section>
+      <AnimDiv className="featured-projects-section-container">
+        <div>
+          <AnimDiv>
+            <h2>Featured Projects</h2>
+          </AnimDiv>
+          <AnimDiv>
+            <a href="/projects">View All...</a>
+          </AnimDiv>
+        </div>
+        <AnimDiv className="featured-projects-cards-container">
+          <FeaturedProjectCard projectName="polygonAi" />
+          <FeaturedProjectCard projectName="chessAi" />
+          <FeaturedProjectCard projectName="chessAi" />
+        </AnimDiv>
+      </AnimDiv>
       <AnimDiv className="skills-section-container">
         <SkillsCard name="typescript" size={26} />
         <SkillsCard name="html5" size={26} />
@@ -78,21 +90,8 @@ export default function Home() {
         <SkillsCard name="postgresql" size={26} />
         <SkillsCard name="docker" size={26} />
       </AnimDiv>
-      <section className="featured-projects-section-container">
-        <div>
-          <AnimDiv>
-            <h2>Featured Projects</h2>
-          </AnimDiv>
-          <AnimDiv>
-            <a href="/projects">View All...</a>
-          </AnimDiv>
-        </div>
-        <AnimDiv className="featured-projects-cards-container">
-          <FeaturedProjectCard />
 
-          <FeaturedProjectCard />
-        </AnimDiv>
-      </section>
+      {/* TODO: Implement Latest Posts Section */}
       {/* <section className="featured-posts-section-container">
         <AnimDiv>
           <div>
