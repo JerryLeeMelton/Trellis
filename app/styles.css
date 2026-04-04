@@ -435,12 +435,20 @@ h1 {
   line-height: 0;
 }
 
+.skills-card-container svg {
+  transition: transform 0.2s ease;
+}
+
 .skills-card-container:hover,
 .skills-card-container:hover svg,
 .skills-card-container:hover p {
   border-color: var(--accent-main);
   color: var(--accent-main);
-  transition: border-color 0.2s ease;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.skills-card-container:hover svg {
+  transform: translateY(-3px);
 }
 
 /* About Page =============================================== */
