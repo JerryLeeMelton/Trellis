@@ -24,6 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${montserrat.variable} h-full antialiased`}>
       <body className="">
+        <a href="#main-content" className="skip-link">Skip to main content</a>
         <NavBar />
         {children}
         <Footer />

@@ -28,14 +28,15 @@ interface AnimDivProps {
 
 export function AnimPage({ children, className }: AnimPageProps) {
   return (
-    <motion.div
+    <motion.main
+      id="main-content"
       variants={container}
       initial="hidden"
       animate="visible"
       className={className}
     >
       {children}
-    </motion.div>
+    </motion.main>
   )
 }
 

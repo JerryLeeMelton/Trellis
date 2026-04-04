@@ -17,6 +17,8 @@ export default function SVGIcon({ name, size, color }: SVGIconProps) {
       viewBox={icon.viewBox}
       className="svg-icon"
       style={{ color }}
+      aria-hidden="true"
+      focusable="false"
     >
       {icon.content}
     </svg>

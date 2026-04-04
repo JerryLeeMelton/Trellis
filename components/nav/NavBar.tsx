@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { usePathname } from "next/navigation"
 
 const navLinks = [
@@ -17,6 +17,14 @@ export default function NavBar() {
   const segments = pathname.split("/").filter(Boolean)
 
   const closeMenu = () => setIsMenuOpen(false)
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape" && isMenuOpen) closeMenu()
+    }
+    document.addEventListener("keydown", handleKeyDown)
+    return () => document.removeEventListener("keydown", handleKeyDown)
+  }, [isMenuOpen])
 
   return (
     <>
@@ -74,7 +82,10 @@ export default function NavBar() {
       )}
 
       {/* Slide-in drawer */}
-      <div className={`nav-drawer${isMenuOpen ? " nav-drawer--open" : ""}`}>
+      <div
+        className={`nav-drawer${isMenuOpen ? " nav-drawer--open" : ""}`}
+        inert={!isMenuOpen}
+      >
         <button
           className="nav-drawer-close"
           onClick={closeMenu}

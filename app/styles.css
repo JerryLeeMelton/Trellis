@@ -3,6 +3,37 @@ Mobile: max-width: 768px
 Tablet: 769px–1024px
 Desktop: 1025px+ */
 
+/* Screen-reader-only utility — visually hidden but accessible */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Skip navigation link — hidden until focused by keyboard */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 9999;
+  padding: 0.5rem 1rem;
+  background: var(--accent-main);
+  color: var(--background);
+  border-radius: var(--default-border-radius);
+  font-weight: 600;
+  text-decoration: none;
+  transition: top 0.2s ease;
+}
+.skip-link:focus {
+  top: 1rem;
+}
+
 /* Default Color Scheme v2.0 */
 :root {
   --background: #2c3340;

@@ -21,7 +21,8 @@ export default function Contact() {
     /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)
   const isDisabled = !name || !email || !message
 
-  async function handleSubmit() {
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault()
     if (!isValidEmail(email)) {
       setStatus("invalidemail")
       return
@@ -51,27 +52,16 @@ export default function Contact() {
     }
   }
 
-  function renderStatusMessage(status: string) {
-    const cssClass: string = "contact-form-message"
+  function statusMessage(status: string) {
     switch (status) {
       case "sent":
-        return (
-          <div className={cssClass}>
-            Message sent! I'll get back to you as soon as I can!
-          </div>
-        )
+        return "Message sent! I'll get back to you as soon as I can!"
       case "invalidemail":
-        return (
-          <div className={cssClass}>Please enter a valid email address.</div>
-        )
+        return "Please enter a valid email address."
       case "error":
-        return (
-          <div className={cssClass}>
-            Something went wrong. Please try again.
-          </div>
-        )
+        return "Something went wrong. Please try again."
       default:
-        return null
+        return ""
     }
   }
 
@@ -85,8 +75,9 @@ export default function Contact() {
           <PortlandMap />
         </AnimDiv>
 
-        <div className="contact-form-container">
+        <form className="contact-form-container" onSubmit={handleSubmit}>
           <AnimDiv className="contact-form-input-container">
+            <label htmlFor="name" className="sr-only">Name</label>
             <input
               type="text"
               id="name"
@@ -94,6 +85,7 @@ export default function Contact() {
               value={name}
               onChange={(e) => setName(e.target.value)}
             />
+            <label htmlFor="email" className="sr-only">Email</label>
             <input
               type="email"
               id="email"
@@ -103,6 +95,7 @@ export default function Contact() {
             />
           </AnimDiv>
           <AnimDiv className="contact-form-textarea-container">
+            <label htmlFor="message" className="sr-only">Message</label>
             <textarea
               id="message"
               placeholder="Your message here..."
@@ -115,13 +108,18 @@ export default function Contact() {
               className="contact-form-submit-button"
               type="submit"
               disabled={isDisabled || status === "sending"}
-              onClick={handleSubmit}
             >
               {status === "sending" ? "Sending" : "Send Message"}
             </button>
-            {renderStatusMessage(status)}
+            <div
+              role="alert"
+              aria-live="polite"
+              className="contact-form-message"
+            >
+              {statusMessage(status)}
+            </div>
           </AnimDiv>
-        </div>
+        </form>
       </div>
     </AnimPage>
   )
