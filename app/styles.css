@@ -275,11 +275,15 @@ h1 {
 .intro-text-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  gap: 1rem;
   flex: 1 1 0;
   min-width: 0;
 }
-.intro-text-container p {
+.intro-text-container p,
+.intro-text-container h1,
+.intro-text-container h2,
+.intro-text-container h3 {
   margin-top: 0;
   margin-bottom: 0;
 }
