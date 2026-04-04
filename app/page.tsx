@@ -28,7 +28,7 @@ export default function Home() {
           </div>
           {/* Intro text and hero image */}
           <div className="intro-text-and-hero-image-container">
-            <div>
+            <div className="intro-text-container">
               <AnimP>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                 Accusamus, molestias? Asperiores minima veniam delectus rerum
@@ -38,20 +38,48 @@ export default function Home() {
                 omnis aliquam, magni est voluptatum, eum alias nesciunt
                 dignissimos.
               </AnimP>
+              <AnimDiv className="intro-social-links-container">
+                <a href="/resume" target="_blank" rel="noopener noreferrer">
+                  <SVGIcon name="file" size={19} />
+                  Resume
+                </a>
+                <span className="opacity-40">|</span>
+                <a
+                  href="https://github.com/JerryLeeMelton"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <SVGIcon name="github" size={25} />
+                  Github
+                </a>
+                <span className="opacity-40">|</span>
+                <a
+                  href="https://www.linkedin.com/in/jerryleemelton/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <SVGIcon name="linkedin" size={22} />
+                  LinkedIn
+                </a>
+                {/* <span className="opacity-40">|</span>
+                <a href="/about">
+                  More about me <SVGIcon name="arrowRight" size={16} />
+                </a> */}
+              </AnimDiv>
             </div>
             <AnimDiv className="greeting-image-container">
               <Image
                 src="/images/jerry_hero_fullSize.webp"
                 alt="Picture of Jerry Lee Melton"
-                width={300}
-                height={300}
+                width={600}
+                height={600}
                 className="intro-image img-zoom"
               />
             </AnimDiv>
           </div>
         </div>
         {/* Resume, Social Links, About Link */}
-        <AnimDiv className="intro-social-links-container">
+        {/* <AnimDiv className="intro-social-links-container">
           <a href="/resume" target="_blank" rel="noopener noreferrer">
             <SVGIcon name="file" size={19} />
             Resume
@@ -78,7 +106,7 @@ export default function Home() {
           <a href="/about">
             More about me <SVGIcon name="arrowRight" size={16} />
           </a>
-        </AnimDiv>
+        </AnimDiv> */}
       </section>
       <AnimDiv className="skills-section-container">
         <SkillsCard name="typescript" size={26} />
