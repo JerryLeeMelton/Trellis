@@ -38,6 +38,7 @@ export default function Home() {
                 omnis aliquam, magni est voluptatum, eum alias nesciunt
                 dignissimos.
               </AnimP>
+              {/* Resume & Social Links */}
               <AnimDiv className="intro-social-links-container">
                 <a href="/resume" target="_blank" rel="noopener noreferrer">
                   <SVGIcon name="file" size={19} />
@@ -61,10 +62,6 @@ export default function Home() {
                   <SVGIcon name="linkedin" size={22} />
                   LinkedIn
                 </a>
-                {/* <span className="opacity-40">|</span>
-                <a href="/about">
-                  More about me <SVGIcon name="arrowRight" size={16} />
-                </a> */}
               </AnimDiv>
             </div>
             <AnimDiv className="greeting-image-container">
@@ -78,35 +75,6 @@ export default function Home() {
             </AnimDiv>
           </div>
         </div>
-        {/* Resume, Social Links, About Link */}
-        {/* <AnimDiv className="intro-social-links-container">
-          <a href="/resume" target="_blank" rel="noopener noreferrer">
-            <SVGIcon name="file" size={19} />
-            Resume
-          </a>
-          <span className="opacity-40">|</span>
-          <a
-            href="https://github.com/JerryLeeMelton"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <SVGIcon name="github" size={25} />
-            Github
-          </a>
-          <span className="opacity-40">|</span>
-          <a
-            href="https://www.linkedin.com/in/jerryleemelton/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <SVGIcon name="linkedin" size={22} />
-            LinkedIn
-          </a>
-          <span className="opacity-40">|</span>
-          <a href="/about">
-            More about me <SVGIcon name="arrowRight" size={16} />
-          </a>
-        </AnimDiv> */}
       </section>
       <AnimDiv className="skills-section-container">
         <SkillsCard name="typescript" size={26} />
