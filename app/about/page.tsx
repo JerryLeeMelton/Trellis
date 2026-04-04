@@ -56,6 +56,7 @@ export default function About() {
             width={600}
             height={600}
             className="about-image img-zoom"
+            priority
           />
         </div>
       </AnimDiv>

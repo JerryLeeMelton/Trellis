@@ -61,6 +61,7 @@ export default function Home() {
               width={600}
               height={600}
               className="intro-image img-zoom"
+              priority
             />
           </AnimDiv>
         </div>

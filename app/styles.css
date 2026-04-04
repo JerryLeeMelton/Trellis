@@ -800,24 +800,18 @@ input:focus {
   border-radius: var(--default-border-radius);
   padding: 0.5rem 1rem;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
 }
 .contact-form-submit-button:hover {
   color: var(--background);
   background-color: var(--accent-main);
   border: 1px solid var(--accent-main);
-  transition:
-    all 0.2s ease,
-    color 0.2s ease;
 }
 .contact-form-submit-button:disabled {
   color: var(--text-main-semi-transparent);
   background-color: var(--background);
   border: 1px solid var(--text-main-semi-transparent);
   cursor: not-allowed;
-  transition:
-    all 0.2s ease,
-    color 0.2s ease;
 }
 
 .contact-map-wrapper {
