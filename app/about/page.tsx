@@ -67,7 +67,7 @@ export default function About() {
             height={300}
             className="cat-image img-zoom"
           />
-          <p>Hank</p>
+          <p className="cat-pic-label">Hank</p>
         </div>
         <div>
           <Image
@@ -77,7 +77,7 @@ export default function About() {
             height={300}
             className="cat-image img-zoom"
           />
-          <p>Josie</p>
+          <p className="cat-pic-label">Josie</p>
         </div>
         <div>
           <Image
@@ -87,7 +87,7 @@ export default function About() {
             height={300}
             className="cat-image img-zoom"
           />
-          <p>Dorian</p>
+          <p className="cat-pic-label">Dorian</p>
         </div>
       </AnimDiv>
     </AnimPage>

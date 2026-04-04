@@ -17,7 +17,7 @@ export const projectCardData: Record<string, ProjectCardData> = {
     image: "/images/placeholder.webp",
     description:
       "An AI-powered solution for polygon analysis and visualization.",
-    tags: ["react", "electron", "redux"],
+    tags: ["typescript", "react", "electron", "redux", "kotlin"],
   },
   chessAi: {
     title: "Chess AI",

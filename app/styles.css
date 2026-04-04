@@ -13,6 +13,7 @@ Desktop: 1025px+ */
   --accent-main: #81c7ad;
 
   --default-border-radius: 8px;
+  --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 body {
@@ -49,6 +50,7 @@ a:hover {
 
 img {
   border-radius: var(--default-border-radius);
+  box-shadow: var(--card-shadow);
 }
 
 .svg-icon {
@@ -75,7 +77,16 @@ img {
 }
 
 h1 {
-  font-size: clamp(1.5rem, 4vw, 3rem);
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+h2 {
+  font-size: clamp(1.25rem, 3vw, 2.5rem);
+}
+h3 {
+  font-size: clamp(1.1rem, 2.5vw, 2rem);
+}
+h4 {
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
 }
 
 .opacity-80 {
@@ -256,6 +267,7 @@ h1 {
   flex-direction: row;
   align-items: center;
   font-size: 1rem;
+  margin-top: 1rem;
   gap: 1rem;
 }
 .intro-social-links-container a {
@@ -265,10 +277,15 @@ h1 {
   gap: 0.5rem;
 }
 
+.intro-text {
+  margin-top: 1rem !important;
+}
+
 .intro-text-and-hero-image-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   gap: 2rem;
 }
 
@@ -283,7 +300,8 @@ h1 {
 .intro-text-container p,
 .intro-text-container h1,
 .intro-text-container h2,
-.intro-text-container h3 {
+.intro-text-container h3,
+.intro-text-container h4 {
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -337,6 +355,7 @@ h1 {
   border: 1px solid var(--accent-main);
   border-radius: var(--default-border-radius);
   padding: 1rem;
+  box-shadow: var(--card-shadow);
 }
 
 /* Projects Page ================================================== */
@@ -365,6 +384,7 @@ h1 {
   text-decoration: none;
   cursor: pointer;
   transition: border-color 0.2s ease;
+  box-shadow: var(--card-shadow);
 }
 .project-card-container:hover {
   border-color: var(--accent-main);
@@ -395,6 +415,11 @@ h1 {
   color: var(--background);
   padding: 0.2rem 0.5rem;
   border-radius: var(--default-border-radius);
+}
+
+/* Latest Posts Card ------------------------- */
+.latest-posts-card-container {
+  box-shadow: var(--card-shadow);
 }
 
 /* Skills Cards ------------------------------ */
@@ -428,6 +453,7 @@ h1 {
   border-radius: var(--default-border-radius);
   padding: 0.8rem;
   aspect-ratio: 1 / 1;
+  box-shadow: var(--card-shadow);
 }
 .skills-card-container p {
   font-size: 0.75rem;
@@ -444,7 +470,9 @@ h1 {
 .skills-card-container:hover p {
   border-color: var(--accent-main);
   color: var(--accent-main);
-  transition: border-color 0.2s ease, transform 0.2s ease;
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease;
 }
 
 .skills-card-container:hover svg {
@@ -495,7 +523,6 @@ h1 {
   align-items: center;
   font-size: 1rem;
   margin-top: 2rem;
-  margin-bottom: 2rem;
   gap: 1rem;
 }
 .about-social-links-container a {
@@ -532,6 +559,10 @@ h1 {
 }
 .cat-pics-container p {
   line-height: 0;
+}
+.cat-pic-label {
+  font-size: 1.2rem;
+  margin-top: 1.8rem;
 }
 
 @media screen and (max-width: 768px) {

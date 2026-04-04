@@ -3,6 +3,7 @@ import {
   AnimH1,
   AnimH2,
   AnimH3,
+  AnimH4,
   AnimP,
   AnimPage,
 } from "@/components/animationComponents/AnimatedComponents"
@@ -19,12 +20,12 @@ export default function Home() {
       <section className="intro-section-container">
         <div className="intro-text-and-hero-image-container">
           <div className="intro-text-container">
-            <AnimH2>Hello!</AnimH2>
+            {/* <AnimH2>Hello!</AnimH2> */}
             <AnimH1>
-              I'm <span className="text-accent-main">Jerry Lee Melton</span>.
+              Hello! I'm <span className="text-accent-main">Jerry</span>.
             </AnimH1>
-            <AnimH3>Full-Stack Developer based in Portland, Oregon. 🇺🇸</AnimH3>
-            <AnimP>
+            <AnimH4>Full-Stack Developer based in Portland, Oregon.</AnimH4>
+            <AnimP className="intro-text">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               Accusamus, molestias? Asperiores minima veniam delectus rerum
               quaerat eaque placeat rem ipsum nobis, omnis aliquam, magni est

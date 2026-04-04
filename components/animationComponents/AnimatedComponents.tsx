@@ -74,3 +74,10 @@ export function AnimH3({ children, className }: AnimDivProps) {
     </motion.h3>
   )
 }
+export function AnimH4({ children, className }: AnimDivProps) {
+  return (
+    <motion.h4 variants={item} className={className}>
+      {children}
+    </motion.h4>
+  )
+}

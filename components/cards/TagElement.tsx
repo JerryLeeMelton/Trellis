@@ -11,7 +11,9 @@ const tagColors: Record<string, string> = {
   golang: "#bce5bc",
   electron: "#e5d2bc",
   redux: "#dee5bc",
-  css: "#e5bcbc",
+  css3: "#e5bcbc",
+  html5: "#e5c9bc",
+  kotlin: "#c9e5bc",
 }
 
 export default function TagElement({ tagName }: TagElementProps) {
