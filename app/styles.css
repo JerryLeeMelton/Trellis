@@ -355,7 +355,6 @@ h4 {
   align-items: center;
   padding: 1.5rem 0;
   margin-top: auto;
-  background-color: red;
   width: 100%;
   background-color: rgba(0, 0, 0, 0);
 }
@@ -795,7 +794,7 @@ textarea:focus,
 input:focus {
   outline: none;
   border: 1px solid var(--accent-main);
-  box-shadow: 0 0 0 3px rgba(your-rgb, 0.3);
+  box-shadow: 0 0 0 3px rgba(129, 199, 173, 0.3);
 }
 
 .contact-form-submit-button-container {
@@ -831,7 +830,10 @@ input:focus {
   border-radius: var(--default-border-radius);
   padding: 0.5rem 1rem;
   cursor: pointer;
-  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease;
 }
 .contact-form-submit-button:hover {
   color: var(--background);

@@ -10,6 +10,7 @@ import LatestPostsCard from "@/components/cards/LatestPostsCard"
 import SkillsCard from "@/components/cards/SkillsCard"
 import SVGIcon from "@/components/svg/SVGIcon"
 import Image from "next/image"
+import Link from "next/link"
 
 export default function Home() {
   return (
@@ -72,7 +73,7 @@ export default function Home() {
             <h2>Featured Projects</h2>
           </AnimDiv>
           <AnimDiv>
-            <a href="/projects">View All...</a>
+            <Link href="/projects">View All...</Link>
           </AnimDiv>
         </div>
         <AnimDiv className="featured-projects-cards-container">
@@ -99,7 +100,7 @@ export default function Home() {
             <h2>Latest Posts</h2>
           </div>
           <div>
-            <a href="/projects">View All...</a>
+            <Link href="/projects">View All...</Link>
           </div>
         </AnimDiv>
         <AnimDiv className="featured-projects-cards-container">

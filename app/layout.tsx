@@ -11,9 +11,30 @@ const montserrat = Montserrat({
 })
 
 export const metadata: Metadata = {
-  title: "Jerry Lee Melton — Full Stack Web Developer",
+  metadataBase: new URL("https://jerryleemelton.com"),
+  title: {
+    default: "Jerry Lee Melton — Full Stack Web Developer",
+    template: "%s — Jerry Lee Melton",
+  },
   description:
     "Portfolio of Jerry Lee Melton, a full stack web developer based in Portland, OR.",
+  openGraph: {
+    siteName: "Jerry Lee Melton",
+    type: "website",
+    locale: "en_US",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Jerry Lee Melton — Full Stack Web Developer",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/og-image.png"],
+  },
 }
 
 export default function RootLayout({

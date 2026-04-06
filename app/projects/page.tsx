@@ -1,9 +1,22 @@
+import type { Metadata } from "next"
 import {
   AnimDiv,
   AnimPage,
 } from "@/components/animationComponents/AnimatedComponents"
 import ProjectCard from "@/components/cards/ProjectCard"
 import Image from "next/image"
+
+export const metadata: Metadata = {
+  title: "Projects",
+  description:
+    "A collection of projects built by Jerry Lee Melton, spanning web apps, desktop tools, and AI integrations.",
+  openGraph: {
+    title: "Projects — Jerry Lee Melton",
+    description:
+      "A collection of projects built by Jerry Lee Melton, spanning web apps, desktop tools, and AI integrations.",
+    url: "/projects",
+  },
+}
 
 export default function Projects() {
   return (

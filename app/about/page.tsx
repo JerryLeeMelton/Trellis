@@ -1,9 +1,22 @@
+import type { Metadata } from "next"
 import SVGIcon from "@/components/svg/SVGIcon"
 import Image from "next/image"
 import {
   AnimDiv,
   AnimPage,
 } from "@/components/animationComponents/AnimatedComponents"
+
+export const metadata: Metadata = {
+  title: "About",
+  description:
+    "Learn more about Jerry Lee Melton — full stack developer, cat dad, and Portland local.",
+  openGraph: {
+    title: "About — Jerry Lee Melton",
+    description:
+      "Learn more about Jerry Lee Melton — full stack developer, cat dad, and Portland local.",
+    url: "/about",
+  },
+}
 
 export default function About() {
   return (

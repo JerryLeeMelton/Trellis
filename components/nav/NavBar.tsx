@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
+import Link from "next/link"
 import { usePathname } from "next/navigation"
 
 const navLinks = [
@@ -33,17 +34,17 @@ export default function NavBar() {
           <div className="nav-path-container">
             <p>
               ~ /
-              <a href="/" className="nav-path-link">
+              <Link href="/" className="nav-path-link">
                 jerry
-              </a>
+              </Link>
               {segments.map((segment, i) => {
                 const href = "/" + segments.slice(0, i + 1).join("/")
                 return (
                   <span key={href}>
                     /
-                    <a href={href} className="nav-path-link">
+                    <Link href={href} className="nav-path-link">
                       {segment}
-                    </a>
+                    </Link>
                   </span>
                 )
               })}
@@ -57,7 +58,7 @@ export default function NavBar() {
             <ul>
               {navLinks.map((link) => (
                 <li key={link.href}>
-                  <a href={link.href}>{link.label}</a>
+                  <Link href={link.href}>{link.label}</Link>
                 </li>
               ))}
             </ul>
@@ -96,9 +97,9 @@ export default function NavBar() {
         <ul className="nav-drawer-links">
           {navLinks.map((link) => (
             <li key={link.href}>
-              <a href={link.href} onClick={closeMenu}>
+              <Link href={link.href} onClick={closeMenu}>
                 {link.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
