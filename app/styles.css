@@ -876,9 +876,9 @@ input:focus {
   }
 }
 
-/* Case Study Pages ================================ */
+/* Main Project Pages ================================ */
 
-.case-study-content {
+.project-page-content {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -886,12 +886,12 @@ input:focus {
   padding-bottom: 4rem;
 }
 
-.case-study-hero-image {
+.project-page-hero-image {
   width: 100%;
   margin-bottom: 2rem;
 }
 
-.case-study-content p {
+.project-page-content p {
   font-size: 1.1rem;
   font-weight: 400;
   margin-top: 0;
@@ -899,11 +899,11 @@ input:focus {
 }
 
 /* Extra breathing room before the next major section */
-.case-study-content .case-study-intro-end {
+.project-page-content .project-page-intro-end {
   margin-bottom: 2.5rem;
 }
 
-.case-study-content h4 {
+.project-page-content h4 {
   margin-top: 0;
   font-weight: 500;
   font-size: 1.6rem;
@@ -912,12 +912,12 @@ input:focus {
 
 /* h4 that follows a paragraph inherits enough space from the paragraph margin;
    when an h4 directly follows another block element we want a bigger gap */
-.case-study-content img + h4,
-.case-study-content .case-study-image-caption + h4 {
+.project-page-content img + h4,
+.project-page-content .project-page-image-caption + h4 {
   margin-top: 2rem;
 }
 
-.case-study-content h6 {
+.project-page-content h6 {
   font-size: 1.2rem;
   font-weight: 600;
   letter-spacing: 0.03em;
@@ -925,12 +925,12 @@ input:focus {
   margin-bottom: 0.5rem;
 }
 
-.case-study-content img:not(.case-study-hero-image) {
+.project-page-content img:not(.project-page-hero-image) {
   width: 100%;
   margin-bottom: 0.5rem;
 }
 
-.case-study-image-caption {
+.project-page-image-caption {
   font-size: 0.85rem;
   opacity: 0.55;
   text-align: center;
@@ -938,7 +938,7 @@ input:focus {
   margin-bottom: 2rem;
 }
 
-.case-study-label {
+.project-page-label {
   text-transform: uppercase;
   font-weight: 600;
   font-size: 1rem;
@@ -946,15 +946,20 @@ input:focus {
   color: var(--text-main);
 }
 
-.case-study-text-link {
+.project-page-text-link {
   text-decoration-line: underline;
   text-decoration-style: dotted;
 }
 
 @media screen and (max-width: 768px) {
-  .case-study-content {
+  .project-page-content {
     padding-bottom: 2rem;
   }
+}
+
+.project-page-content .project-card-tags-container {
+  justify-content: flex-start;
+  margin-bottom: 1.5rem;
 }
 
 /* Map component --------------------------- */

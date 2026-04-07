@@ -1,25 +1,33 @@
 import SVGIcon from "@/components/svg/SVGIcon"
+import TagElement from "@/components/cards/TagElement"
 import Image from "next/image"
 import Link from "next/link"
+import type { ProjectContentProps } from "@/content/projects"
 
-export default function PolygonAiContent() {
+export default function PolygonAiContent({ tags }: ProjectContentProps) {
   return (
-    <div className="case-study-content">
+    <div className="project-page-content">
       <Image
         src="/images/casestudies/polygon/polygon_casestudy_hero_cropped.webp"
         alt="Polygon AI main interface"
-        className="case-study-hero-image"
+        className="project-page-hero-image"
         width={1200}
         height={630}
       />
+      <div className="project-card-tags-container">
+        <SVGIcon name="tag" size={22} />
+        {tags.map((tag) => (
+          <TagElement key={tag} tagName={tag} />
+        ))}
+      </div>
 
       <p>
-        <span className="case-study-label">Challenge:</span>
+        <span className="project-page-label">Challenge:</span>
         <Link
           href="https://rewire.ai/"
           target="_blank"
           rel="noopener noreferrer"
-          className="case-study-text-link"
+          className="project-page-text-link"
         >
           Rewire AI&apos;s
         </Link>{" "}
@@ -27,8 +35,8 @@ export default function PolygonAiContent() {
         technical and niche capabilities. However, its potential was hampered by
         an unfocused user interface design.
       </p>
-      <p className="case-study-intro-end">
-        <span className="case-study-label">Solution:</span>A rebranding and
+      <p className="project-page-intro-end">
+        <span className="project-page-label">Solution:</span>A rebranding and
         interface redesign to clarify UI sections, providing a more focused and
         cohesive user experience.
       </p>
@@ -47,7 +55,7 @@ export default function PolygonAiContent() {
         width={1200}
         height={800}
       />
-      <div className="case-study-image-caption">
+      <div className="project-page-image-caption">
         Pipsqueak Pro main interface screen before I joined the team
       </div>
 
@@ -67,10 +75,10 @@ export default function PolygonAiContent() {
         width={800}
         height={400}
       />
-      <div className="case-study-image-caption">
+      <div className="project-page-image-caption">
         Old Pipsqueak Pro logo vs new Polygon AI logo
       </div>
-      <p className="case-study-intro-end">
+      <p className="project-page-intro-end">
         After numerous sketches and iterations, we settled on a sleeker, edgier
         logo compared to the previous Pipsqueak Pro design. The angular logo
         aligned with the cutting-edge aesthetic we aimed for and set the
@@ -84,7 +92,7 @@ export default function PolygonAiContent() {
         width={1200}
         height={800}
       />
-      <div className="case-study-image-caption">
+      <div className="project-page-image-caption">
         Wireframe sketches for the Polygon AI interface redesign
       </div>
       <p>
@@ -94,7 +102,7 @@ export default function PolygonAiContent() {
         order. It was crucial to maintain this flexibility while improving
         visual organization.
       </p>
-      <p className="case-study-intro-end">
+      <p className="project-page-intro-end">
         We retained the three-panel design but introduced icon-based buttons
         along the app&apos;s left and right borders for navigation. This created
         clear sections within the app while preserving a familiar layout for
@@ -120,7 +128,7 @@ export default function PolygonAiContent() {
       </p>
 
       <h6>Analytics</h6>
-      <p className="case-study-intro-end">
+      <p className="project-page-intro-end">
         Another important feature that I created for Polygon was the ability to
         track user analytics data. This helped the team to better understand
         user behavior and any potential pain points in the user experience.
@@ -133,7 +141,7 @@ export default function PolygonAiContent() {
         width={1200}
         height={800}
       />
-      <div className="case-study-image-caption">
+      <div className="project-page-image-caption">
         Current Polygon AI main user interface
       </div>
       <p>

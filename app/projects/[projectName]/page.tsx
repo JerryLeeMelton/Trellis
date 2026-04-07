@@ -43,7 +43,7 @@ export default async function ProjectPage({
     <AnimPage className="main-content-container">
       <AnimDiv className="">
         <h1>{projectData.title}</h1>
-        <ProjectContent />
+        <ProjectContent tags={projectData.tags} />
       </AnimDiv>
     </AnimPage>
   )

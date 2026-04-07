@@ -7,7 +7,9 @@ import MidiManiContent from "./midiMani"
 import NomenatorContent from "./nomenator"
 import TrellisContent from "./trellis"
 
-export const projectContent: Record<string, ComponentType> = {
+export type ProjectContentProps = { tags: string[] }
+
+export const projectContent: Record<string, ComponentType<ProjectContentProps>> = {
   testProject: TestProjectContent,
   polygonAi: PolygonAiContent,
   chessAi: ChessAiContent,
