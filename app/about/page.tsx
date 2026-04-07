@@ -5,6 +5,7 @@ import {
   AnimDiv,
   AnimPage,
 } from "@/components/animationComponents/AnimatedComponents"
+import Link from "next/link"
 
 export const metadata: Metadata = {
   title: "About",
@@ -37,10 +38,10 @@ export default function About() {
             dolorum? Animi dolor sunt et ut recusandae! Animi, nesciunt?
           </p>
           <div className="about-social-links-container">
-            <a href="/resume" target="_blank" rel="noopener noreferrer">
+            <Link href="/resume" target="_blank" rel="noopener noreferrer">
               <SVGIcon name="file" size={19} />
               Resume
-            </a>
+            </Link>
             <span>|</span>
             <a
               href="https://github.com/JerryLeeMelton"

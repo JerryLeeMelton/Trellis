@@ -3,6 +3,7 @@ import { Montserrat } from "next/font/google"
 import "./styles.css"
 import NavBar from "@/components/nav/NavBar"
 import Footer from "@/components/Footer"
+import Link from "next/link"
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -45,7 +46,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${montserrat.variable} h-full antialiased`}>
       <body className="">
-        <a href="#main-content" className="skip-link">Skip to main content</a>
+        <Link href="#main-content" className="skip-link">
+          Skip to main content
+        </Link>
         <NavBar />
         {children}
         <Footer />

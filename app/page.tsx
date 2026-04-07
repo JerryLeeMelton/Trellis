@@ -31,28 +31,28 @@ export default function Home() {
             </AnimP>
             {/* Resume & Social Links */}
             <AnimDiv className="intro-social-links-container">
-              <a href="/resume" target="_blank" rel="noopener noreferrer">
+              <Link href="/resume" target="_blank" rel="noopener noreferrer">
                 <SVGIcon name="file" size={19} />
                 Resume
-              </a>
+              </Link>
               <span className="opacity-40">|</span>
-              <a
+              <Link
                 href="https://github.com/JerryLeeMelton"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <SVGIcon name="github" size={25} />
                 Github
-              </a>
+              </Link>
               <span className="opacity-40">|</span>
-              <a
+              <Link
                 href="https://www.linkedin.com/in/jerryleemelton/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <SVGIcon name="linkedin" size={22} />
                 LinkedIn
-              </a>
+              </Link>
             </AnimDiv>
           </div>
           <AnimDiv className="greeting-image-container">
@@ -69,12 +69,16 @@ export default function Home() {
       </section>
       <AnimDiv className="featured-projects-section-container">
         <div>
-          <AnimDiv>
-            <h2>Featured Projects</h2>
+          <AnimDiv className="featured-projects-title">
+            <h2>Featured Projects</h2>{" "}
+            <Link href="/projects">
+              View All
+              <SVGIcon name="arrowRight" size={19} />
+            </Link>
           </AnimDiv>
-          <AnimDiv>
+          {/* <AnimDiv>
             <Link href="/projects">View All...</Link>
-          </AnimDiv>
+          </AnimDiv> */}
         </div>
         <AnimDiv className="featured-projects-cards-container">
           <FeaturedProjectCard projectName="polygonAi" />

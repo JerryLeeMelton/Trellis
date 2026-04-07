@@ -483,6 +483,19 @@ h4 {
   gap: 1rem;
 }
 
+.featured-projects-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.featured-projects-title a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.6rem;
+}
 @media screen and (max-width: 768px) {
   .featured-projects-cards-container {
     flex-direction: column;
@@ -860,6 +873,87 @@ input:focus {
   .contact-form-input-container {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* Case Study Pages ================================ */
+
+.case-study-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
+  padding-bottom: 4rem;
+}
+
+.case-study-hero-image {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.case-study-content p {
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+/* Extra breathing room before the next major section */
+.case-study-content .case-study-intro-end {
+  margin-bottom: 2.5rem;
+}
+
+.case-study-content h4 {
+  margin-top: 0;
+  font-weight: 500;
+  font-size: 1.6rem;
+  margin-bottom: 1.2rem;
+}
+
+/* h4 that follows a paragraph inherits enough space from the paragraph margin;
+   when an h4 directly follows another block element we want a bigger gap */
+.case-study-content img + h4,
+.case-study-content .case-study-image-caption + h4 {
+  margin-top: 2rem;
+}
+
+.case-study-content h6 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.case-study-content img:not(.case-study-hero-image) {
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.case-study-image-caption {
+  font-size: 0.85rem;
+  opacity: 0.55;
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+
+.case-study-label {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-right: 0.4rem;
+  color: var(--text-main);
+}
+
+.case-study-text-link {
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+}
+
+@media screen and (max-width: 768px) {
+  .case-study-content {
+    padding-bottom: 2rem;
   }
 }
 
