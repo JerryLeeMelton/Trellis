@@ -29,13 +29,22 @@ export default function About() {
       <AnimDiv className="about-content-container">
         <div className="about-text-container">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Consequuntur blanditiis optio esse maxime ad aut, consequatur
-            quisquam autem rerum delectus. Natus, dolorum? Animi dolor sunt et
-            ut recusandae! Animi, nesciunt? Lorem ipsum dolor sit amet,
-            consectetur adipisicing elit. Consequuntur blanditiis optio esse
-            maxime ad aut, consequatur quisquam autem rerum delectus. Natus,
-            dolorum? Animi dolor sunt et ut recusandae! Animi, nesciunt?
+            I'm Jerry Lee Melton, a creative software engineer and designer. I'm
+            from Los Angeles, CA, but I currently live in Portland, OR with my
+            wife and our three cats.
+          </p>
+          <p>
+            I've been designing things for over a decade and writing code
+            professionally for over three years, so I'm equally likely to have
+            excessively strong opinons about typefaces as I am about Typescript
+            generics. I work primarily with React, Typescript, and Go, and I
+            believe that good design is the difference between software that
+            people love and software that people merely tolerate.
+          </p>
+          <p>
+            When I'm not glued to my computer coding, I love playing one of my
+            ten guitars, photography, cooking, and playing entirely too much
+            Magic the Gathering.
           </p>
           <div className="about-social-links-container">
             <Link href="/resume" target="_blank" rel="noopener noreferrer">

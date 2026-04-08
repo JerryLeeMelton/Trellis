@@ -634,6 +634,7 @@ h4 {
   justify-content: center;
   flex: 1 1 0;
   min-width: 0;
+  gap: 1rem;
 }
 .about-text-container p {
   margin-top: 0;
@@ -663,7 +664,7 @@ h4 {
   flex-direction: row;
   align-items: center;
   font-size: 1rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
   gap: 1rem;
 }
 .about-social-links-container a {

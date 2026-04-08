@@ -24,14 +24,16 @@ export default function Home() {
             </AnimH1>
             <AnimH4>Full-Stack Developer based in Portland, Oregon.</AnimH4>
             <AnimP className="intro-text">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Accusamus, molestias? Asperiores minima veniam delectus rerum
-              quaerat eaque placeat rem ipsum nobis, omnis aliquam, magni est
-              voluptatum, eum alias nesciunt dignissimos.
+              I live to make things. I have three years of experience as a
+              software engineer and ten years of experience in design.
             </AnimP>
             {/* Resume & Social Links */}
             <AnimDiv className="intro-social-links-container">
-              <Link href="/resume" target="_blank" rel="noopener noreferrer">
+              <Link
+                href="/resume/JerryLeeMelton_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <SVGIcon name="file" size={19} />
                 Resume
               </Link>
