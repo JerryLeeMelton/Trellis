@@ -1,20 +1,22 @@
+"use client"
+
 import React, { useRef, useEffect, useCallback } from "react"
 import {
   createGameState,
   createKeyState,
   updateGame,
   resetGame,
-} from "../game/engine"
-import { render, RenderContext } from "../game/renderer"
-import { GameState, KeyState, GamePhase, GameEvent } from "../game/types"
+} from "../../game/engine"
+import { render, RenderContext } from "../../game/renderer"
+import { GameState, KeyState, GamePhase, GameEvent } from "../../game/types"
 import {
   HighScore,
   fetchHighScores,
   submitHighScore,
   isHighScore,
-} from "../game/scores"
-import { CRTFilter, CRTOptions } from "../game/crt"
-import { AudioManager, SoundEffect, AudioOptions } from "../game/audio"
+} from "../../game/scores"
+import { CRTFilter, CRTOptions } from "../../game/crt"
+import { AudioManager, SoundEffect, AudioOptions } from "../../game/audio"
 
 interface ReacterroidsGameProps {
   width?: number

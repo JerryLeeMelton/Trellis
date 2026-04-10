@@ -1019,3 +1019,15 @@ input:focus {
 .skip-link:focus {
   top: 1rem;
 }
+
+/* Reacteroids Game Styles ============================= */
+.reacteroids-game-wrapper {
+  /* width: 100%; */
+  /* max-width: 900px; */
+  margin: 0 auto;
+}
+.asteroids-game-wrapper canvas {
+  /* width: 100%; */
+  /* height: auto; */
+  /* color: red; */
+}

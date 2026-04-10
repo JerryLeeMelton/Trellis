@@ -29,13 +29,13 @@ export default function Projects() {
           <ProjectCard projectName="polygonAi" />
         </AnimDiv>
         <AnimDiv className="project-cards">
-          <ProjectCard projectName="testProject" />
+          <ProjectCard projectName="trellis" />
         </AnimDiv>
         <AnimDiv className="project-cards">
-          <ProjectCard projectName="testProject" />
+          <ProjectCard projectName="reacteroids" />
         </AnimDiv>
         <AnimDiv className="project-cards">
-          <ProjectCard projectName="testProject" />
+          <ProjectCard projectName="nomenator" />
         </AnimDiv>
       </div>
     </AnimPage>

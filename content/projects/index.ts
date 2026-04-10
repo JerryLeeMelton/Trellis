@@ -6,14 +6,19 @@ import ChessAiContent from "./chessAi"
 import MidiManiContent from "./midiMani"
 import NomenatorContent from "./nomenator"
 import TrellisContent from "./trellis"
+import ReacteroidsContent from "./reacteroids"
 
 export type ProjectContentProps = { tags: string[] }
 
-export const projectContent: Record<string, ComponentType<ProjectContentProps>> = {
+export const projectContent: Record<
+  string,
+  ComponentType<ProjectContentProps>
+> = {
   testProject: TestProjectContent,
   polygonAi: PolygonAiContent,
   chessAi: ChessAiContent,
   midiMani: MidiManiContent,
   nomenator: NomenatorContent,
   trellis: TrellisContent,
+  reacteroids: ReacteroidsContent,
 }
