@@ -23,7 +23,7 @@ export default function ProjectCard({ projectName }: ProjectCardProps) {
           className="project-card-image"
         />
       </div>
-      <div>
+      <div className="project-card-body">
         <h3>{projectData.title}</h3>
         <p>{projectData.description}</p>
 

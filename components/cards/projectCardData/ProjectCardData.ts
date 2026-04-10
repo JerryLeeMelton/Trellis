@@ -35,8 +35,7 @@ export const projectCardData: Record<string, ProjectCardData> = {
   nomenator: {
     title: "Nomenator",
     image: "/images/placeholder.webp",
-    description:
-      "This is a test project used for development purposes. This is a test project used for development purposes. This is a test project used for development purposes. This is a test project used for development purposes. This is a test project used for development purposes. This is a test project used for development purposes. This is a test project used for development purposes. This is a test project used for development purposes. This is a test project used for development purposes. This is a test project used for development purposes. ",
+    description: "This is a test project used for development purposes. ",
     tags: ["react", "electron", "typescript", "golang"],
   },
   chessAi: {

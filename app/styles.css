@@ -544,6 +544,7 @@ h4 {
   line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  margin: 0;
 }
 
 .project-card-image {
@@ -553,6 +554,12 @@ h4 {
   border-radius: var(--default-border-radius);
 }
 
+.project-card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
 .project-card-tags-container {
   display: flex;
   flex-direction: row;
@@ -560,6 +567,8 @@ h4 {
   flex-wrap: wrap;
   gap: 0.5rem;
   font-size: 0.9rem;
+  margin-top: auto;
+  padding-top: 1rem;
 }
 
 .project-card-tag {
