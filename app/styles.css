@@ -514,8 +514,14 @@ h4 {
 }
 
 /* (Main) Projects Page Card ----------------------- */
+.project-cards {
+  display: flex;
+}
+
 .project-card-container {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   background-color: var(--background);
   border: 1px solid var(--text-main-semi-transparent);
   border-radius: var(--default-border-radius);
@@ -533,6 +539,11 @@ h4 {
 .project-card-container p {
   font-size: 0.9rem;
   line-height: 1.5rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .project-card-image {
@@ -1022,12 +1033,11 @@ input:focus {
 
 /* Reacteroids Game Styles ============================= */
 .reacteroids-game-wrapper {
-  /* width: 100%; */
+  width: 100%;
   /* max-width: 900px; */
   margin: 0 auto;
 }
-.asteroids-game-wrapper canvas {
-  /* width: 100%; */
-  /* height: auto; */
-  /* color: red; */
+.reacteroids-game-wrapper canvas {
+  width: 100%;
+  height: auto;
 }

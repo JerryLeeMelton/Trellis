@@ -32,6 +32,13 @@ export const projectCardData: Record<string, ProjectCardData> = {
     description: "A React clone of the classic 1979 arcade game Asteroids.",
     tags: ["react", "nextjs", "typescript", "canvas"],
   },
+  nomenator: {
+    title: "Nomenator",
+    image: "/images/placeholder.webp",
+    description:
+      "This is a test project used for development purposes. This is a test project used for development purposes. This is a test project used for development purposes. This is a test project used for development purposes. This is a test project used for development purposes. This is a test project used for development purposes. This is a test project used for development purposes. This is a test project used for development purposes. This is a test project used for development purposes. This is a test project used for development purposes. ",
+    tags: ["react", "electron", "typescript", "golang"],
+  },
   chessAi: {
     title: "Chess AI",
     image: "/images/placeholder.webp",
@@ -43,11 +50,5 @@ export const projectCardData: Record<string, ProjectCardData> = {
     image: "/images/placeholder.webp",
     description: "This is a test project used for development purposes.",
     tags: ["react", "typescript", "nextjs", "golang"],
-  },
-  nomenator: {
-    title: "Nomenator",
-    image: "/images/placeholder.webp",
-    description: "This is a test project used for development purposes.",
-    tags: ["react", "electron", "typescript", "golang"],
   },
 }

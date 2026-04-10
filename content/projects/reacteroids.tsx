@@ -6,6 +6,9 @@ export default function ReacteroidsContent({
 }: ProjectContentProps) {
   return (
     <div>
+      <p className="reactoids-explainer-text">
+        Click into the game to focus it and start playing!
+      </p>
       <ReacteroidsGame
         crtOptions={{
           bloomIntensity: 0.8, // 0-1, glow around bright elements

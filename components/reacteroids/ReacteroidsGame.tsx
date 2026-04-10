@@ -330,7 +330,7 @@ const ReacteroidsGame: React.FC<ReacterroidsGameProps> = ({
       style={{
         outline: "none",
         cursor: "crosshair",
-        display: "inline-block",
+        display: "block",
         lineHeight: 0,
         border: "1px solid rgba(255, 255, 255, 0.2)",
         borderRadius: "4px",
