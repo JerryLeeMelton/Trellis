@@ -447,6 +447,11 @@ h4 {
   gap: 1rem;
 }
 
+.featured-projects-section-container h3 {
+  font-size: clamp(0.8rem, 3vw, 1.5rem);
+  margin-bottom: 0;
+}
+
 .featured-projects-title {
   display: flex;
   flex-direction: row;
@@ -921,6 +926,14 @@ input:focus {
   text-align: center;
   font-style: italic;
   margin-bottom: 2rem;
+}
+
+.project-page-content ul li {
+  line-height: 1.7;
+}
+
+.project-page-content ul li + li {
+  margin-top: 0.75rem;
 }
 
 .project-page-label {

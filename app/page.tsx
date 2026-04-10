@@ -24,8 +24,8 @@ export default function Home() {
             </AnimH1>
             <AnimH4>Full-Stack Developer based in Portland, Oregon.</AnimH4>
             <AnimP className="intro-text">
-              I live to make things. I have three years of experience as a
-              software engineer and ten years of experience in design.
+              I live to make things. I use my deveopment skills along with my
+              eye for design to make beautiful, functional websites.
             </AnimP>
             {/* Resume & Social Links */}
             <AnimDiv className="intro-social-links-container">
@@ -84,8 +84,8 @@ export default function Home() {
         </div>
         <AnimDiv className="featured-projects-cards-container">
           <FeaturedProjectCard projectName="polygonAi" />
-          <FeaturedProjectCard projectName="chessAi" />
-          <FeaturedProjectCard projectName="chessAi" />
+          <FeaturedProjectCard projectName="trellis" />
+          <FeaturedProjectCard projectName="reacteroids" />
         </AnimDiv>
       </AnimDiv>
       <AnimDiv className="skills-section-container">
