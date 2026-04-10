@@ -33,6 +33,9 @@ export default function SkillsCard({ name, size }: SkillsCardProps) {
     case "docker":
       displayName = "Docker"
       break
+    case "rust":
+      displayName = "Rust"
+      break
     default:
       break
   }

@@ -97,6 +97,7 @@ export default function Home() {
         <SkillsCard name="nextjs" size={26} />
         <SkillsCard name="postgresql" size={26} />
         <SkillsCard name="docker" size={26} />
+        {/* <SkillsCard name="rust" size={26} /> */}
       </AnimDiv>
 
       {/* TODO: Implement Latest Posts Section */}
