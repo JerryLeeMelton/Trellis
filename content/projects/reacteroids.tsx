@@ -125,7 +125,7 @@ export default function ReacteroidsContent({ tags }: ProjectContentProps) {
       </p>
       <div>
         <a href="/projects" className="jlm-link-button">
-          Back to Projects
+          Back to Projects Page
         </a>
       </div>
     </div>

@@ -11,6 +11,17 @@ export default function TrellisContent({ tags }: ProjectContentProps) {
           <TagElement key={tag} tagName={tag} />
         ))}
       </div>
+      <div className="project-page-github-link">
+        <a
+          href="https://github.com/JerryLeeMelton/Trellis"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <SVGIcon name="github" size={25} />
+          Github Repo
+          <SVGIcon name="externalLink" size={16} />
+        </a>
+      </div>
 
       <p>
         <span className="project-page-label">Challenge:</span>
@@ -102,7 +113,7 @@ export default function TrellisContent({ tags }: ProjectContentProps) {
       </p>
       <div>
         <a href="/projects" className="jlm-link-button">
-          Back to Projects
+          Back to Projects Page
         </a>
       </div>
     </div>

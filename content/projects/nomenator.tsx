@@ -162,7 +162,7 @@ export default function NomenatorContent({ tags }: ProjectContentProps) {
       </ul>
       <div>
         <a href="/projects" className="jlm-link-button">
-          Back to Projects
+          Back to Projects Page
         </a>
       </div>
     </div>

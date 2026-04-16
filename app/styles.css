@@ -556,7 +556,9 @@ h4 {
   max-height: 190px;
   transition: transform 0.3s ease;
 }
-.featured-project-card-container:hover .featured-project-card-image-container img {
+.featured-project-card-container:hover
+  .featured-project-card-image-container
+  img {
   transform: scale(1.02);
 }
 .featured-project-card-body h3 {
@@ -967,6 +969,22 @@ input:focus {
   font-weight: 400;
   margin-top: 0;
   margin-bottom: 1rem;
+}
+
+.project-page-github-link {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.project-page-github-link a {
+  display: flex;
+  align-items: center;
+}
+.project-page-github-link svg:first-of-type {
+  margin-right: 0.5rem;
+}
+.project-page-github-link svg:last-of-type {
+  margin-left: 0.5rem;
 }
 
 /* Extra breathing room before the next major section */
