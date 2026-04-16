@@ -550,9 +550,14 @@ h4 {
 
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 .featured-project-card-image-container img {
   max-height: 190px;
+  transition: transform 0.3s ease;
+}
+.featured-project-card-container:hover .featured-project-card-image-container img {
+  transform: scale(1.02);
 }
 .featured-project-card-body h3 {
   margin-top: 0.2rem;
@@ -595,6 +600,9 @@ h4 {
   border-color: var(--accent-main);
   color: inherit;
 }
+.project-card-container:hover .project-card-image {
+  transform: scale(1.02);
+}
 .project-card-container p {
   font-size: 0.9rem;
   line-height: 1.5rem;
@@ -616,10 +624,12 @@ h4 {
   border-bottom-left-radius: 0;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 .project-card-image {
   width: auto;
   height: auto;
+  transition: transform 0.3s ease;
   max-height: 290;
   display: block;
   border-radius: var(--default-border-radius);
