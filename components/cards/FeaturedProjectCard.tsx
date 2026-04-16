@@ -18,7 +18,7 @@ export default function FeaturedProjectCard({
       href={`/projects/${projectName}`}
       className="featured-project-card-container project-card-link"
     >
-      <div>
+      <div className="featured-project-card-image-container">
         <Image
           src={projectData.image}
           alt={`Image for ${projectName}`}

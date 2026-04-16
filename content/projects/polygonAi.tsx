@@ -150,6 +150,11 @@ export default function PolygonAiContent({ tags }: ProjectContentProps) {
         achievements with Polygon and am eager to apply the lessons learned to
         future projects.
       </p>
+      <div>
+        <a href="/projects" className="jlm-link-button">
+          Back to Projects
+        </a>
+      </div>
     </div>
   )
 }

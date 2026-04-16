@@ -3,9 +3,7 @@ import SVGIcon from "@/components/svg/SVGIcon"
 import TagElement from "@/components/cards/TagElement"
 import type { ProjectContentProps } from "@/content/projects"
 
-export default function ReacteroidsContent({
-  tags,
-}: ProjectContentProps) {
+export default function ReacteroidsContent({ tags }: ProjectContentProps) {
   return (
     <div className="project-page-content">
       <div className="project-card-tags-container">
@@ -17,11 +15,11 @@ export default function ReacteroidsContent({
 
       <p>
         <span className="project-page-label">Challenge:</span>
-        Classic arcade games are deceptively simple. Asteroids looks like a
-        few triangles bouncing around a screen, but underneath it&apos;s a
-        tightly tuned system of physics, collision detection, spawning logic,
-        and game feel. I wanted to build it from scratch — no game engines, no
-        physics libraries — to really understand what makes it tick.
+        Classic arcade games are deceptively simple. Asteroids looks like a few
+        triangles bouncing around a screen, but underneath it&apos;s a tightly
+        tuned system of physics, collision detection, spawning logic, and game
+        feel. I wanted to build it from scratch — no game engines, no physics
+        libraries — to really understand what makes it tick.
       </p>
       <p className="project-page-intro-end">
         <span className="project-page-label">Solution:</span>
@@ -48,10 +46,10 @@ export default function ReacteroidsContent({
       <h4>Zero Dependencies</h4>
       <p>
         The core constraint I set for this project was that the game logic had
-        to be entirely dependency-free. No libraries for physics, no game
-        engine scaffolding — just TypeScript, the Canvas API, and a game loop
-        driven by <code>requestAnimationFrame</code>. Everything from asteroid
-        spawning to bullet collision to the saucer AI is implemented by hand.
+        to be entirely dependency-free. No libraries for physics, no game engine
+        scaffolding — just TypeScript, the Canvas API, and a game loop driven by{" "}
+        <code>requestAnimationFrame</code>. Everything from asteroid spawning to
+        bullet collision to the saucer AI is implemented by hand.
       </p>
       <p className="project-page-intro-end">
         This turned out to be one of the most educational decisions I made.
@@ -66,9 +64,9 @@ export default function ReacteroidsContent({
         that takes the current game state and a delta time value and returns the
         next state. Rendering is handled separately in a dedicated renderer
         module, keeping game logic and display concerns cleanly separated. The
-        React component is responsible only for running the game loop and
-        wiring up keyboard input — it doesn&apos;t know anything about how the
-        game works internally.
+        React component is responsible only for running the game loop and wiring
+        up keyboard input — it doesn&apos;t know anything about how the game
+        works internally.
       </p>
       <ul className="project-page-intro-end">
         <li>
@@ -112,12 +110,12 @@ export default function ReacteroidsContent({
 
       <h4>Game Feel</h4>
       <p>
-        The original Asteroids has a very specific feel to it — the ship
-        drifts with real momentum, bullets have a limited lifetime that forces
-        you to be accurate, and the UFO adds just enough pressure without being
-        unfair. Getting the numbers right took a lot of tuning. Things like
-        rotation speed, thrust acceleration, drag, bullet speed, and asteroid
-        velocity all had to be balanced against each other until it felt right.
+        The original Asteroids has a very specific feel to it — the ship drifts
+        with real momentum, bullets have a limited lifetime that forces you to
+        be accurate, and the UFO adds just enough pressure without being unfair.
+        Getting the numbers right took a lot of tuning. Things like rotation
+        speed, thrust acceleration, drag, bullet speed, and asteroid velocity
+        all had to be balanced against each other until it felt right.
       </p>
       <p>
         The game also includes a hyperspace jump, extra lives at score
@@ -125,6 +123,11 @@ export default function ReacteroidsContent({
         details that made the original feel complete rather than like a tech
         demo.
       </p>
+      <div>
+        <a href="/projects" className="jlm-link-button">
+          Back to Projects
+        </a>
+      </div>
     </div>
   )
 }

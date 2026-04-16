@@ -54,8 +54,8 @@ export default function NomenatorContent({ tags }: ProjectContentProps) {
         Examples of outdated UI design
       </div>
       <p className="project-page-intro-end">
-        When working on Nomenator, my main goal was to create something with
-        all of the power and utility of those older applications, but with more
+        When working on Nomenator, my main goal was to create something with all
+        of the power and utility of those older applications, but with more
         modern design sensibilities. I wanted the user experience to be as
         seamless and refined as possible.
       </p>
@@ -160,6 +160,11 @@ export default function NomenatorContent({ tags }: ProjectContentProps) {
           would be, in my opinion, a game changer.
         </li>
       </ul>
+      <div>
+        <a href="/projects" className="jlm-link-button">
+          Back to Projects
+        </a>
+      </div>
     </div>
   )
 }

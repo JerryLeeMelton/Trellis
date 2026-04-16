@@ -22,19 +22,19 @@ export default function TrellisContent({ tags }: ProjectContentProps) {
       </p>
       <p className="project-page-intro-end">
         <span className="project-page-label">Solution:</span>
-        Trellis is the site you&apos;re looking at right now. It&apos;s built
-        on Next.js with React and TypeScript, styled entirely with CSS (no
+        Trellis is the site you&apos;re looking at right now. It&apos;s built on
+        Next.js with React and TypeScript, styled entirely with CSS (no
         component library shortcuts), and brought to life with fluid UI
         animations from Motion. Contact form handling is done through Resend.
       </p>
 
       <h4>Why Build It from Scratch?</h4>
       <p>
-        There are plenty of portfolio templates out there, and I&apos;ve seen
-        my share of them. Most look fine, but they all end up looking like
-        each other. I wanted something that felt custom — and honestly, the
-        process of designing and building it from the ground up is itself a
-        better demonstration of my abilities than any template ever could be.
+        There are plenty of portfolio templates out there, and I&apos;ve seen my
+        share of them. Most look fine, but they all end up looking like each
+        other. I wanted something that felt custom — and honestly, the process
+        of designing and building it from the ground up is itself a better
+        demonstration of my abilities than any template ever could be.
       </p>
       <p className="project-page-intro-end">
         Starting from a blank canvas also meant I got to make every decision
@@ -78,15 +78,15 @@ export default function TrellisContent({ tags }: ProjectContentProps) {
 
       <h4>Design Approach</h4>
       <p>
-        The visual design went through several rounds before landing where it
-        is now. I wanted a clean, dark aesthetic with enough visual interest to
+        The visual design went through several rounds before landing where it is
+        now. I wanted a clean, dark aesthetic with enough visual interest to
         feel considered — not just another dark-mode dev portfolio. Typography
         does a lot of heavy lifting here, and the color palette is intentionally
         restrained so that the work can speak for itself.
       </p>
       <p className="project-page-intro-end">
-        The interactive elements were important to get right. Hover states,
-        card animations, and page transitions all needed to feel responsive and
+        The interactive elements were important to get right. Hover states, card
+        animations, and page transitions all needed to feel responsive and
         intentional without being overdone. The goal was always to enhance the
         experience, not show off for its own sake.
       </p>
@@ -95,11 +95,16 @@ export default function TrellisContent({ tags }: ProjectContentProps) {
       <p>
         One of the things I&apos;m most happy with is how the project pages
         work. Rather than static markdown files, each project&apos;s content is
-        a full React component — which means any project can include whatever
-        it needs to best tell its story. Some pages are primarily text and
-        images; others (like Reacteroids) embed a fully interactive experience
-        right on the page.
+        a full React component — which means any project can include whatever it
+        needs to best tell its story. Some pages are primarily text and images;
+        others (like Reacteroids) embed a fully interactive experience right on
+        the page.
       </p>
+      <div>
+        <a href="/projects" className="jlm-link-button">
+          Back to Projects
+        </a>
+      </div>
     </div>
   )
 }

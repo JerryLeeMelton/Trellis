@@ -12,10 +12,13 @@ export default function ProjectCard({ projectName }: ProjectCardProps) {
   const projectData = projectCardData[projectName]
 
   return (
-    <Link href={`/projects/${projectName}`} className="project-card-container project-card-link">
-      <div>
+    <Link
+      href={`/projects/${projectName}`}
+      className="project-card-container project-card-link"
+    >
+      <div className="project-card-image-container">
         <Image
-          src="/images/placeholder.webp"
+          src={`/images/projects/${projectName}_thumb.webp`}
           alt={`Image for ${projectName}`}
           width={400}
           height={200}
