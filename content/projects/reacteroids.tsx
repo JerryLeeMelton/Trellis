@@ -28,9 +28,9 @@ export default function ReacteroidsContent({ tags }: ProjectContentProps) {
         right here in this portfolio — go ahead and give it a try below.
       </p>
 
-      <p className="reactoids-explainer-text">
-        Click into the game to focus it and start playing!
-      </p>
+      <div className="reacteroids-explainer-text">
+        <p>Click into the game to focus it and start playing!</p>
+      </div>
       <ReacteroidsGame
         crtOptions={{
           bloomIntensity: 0.8,

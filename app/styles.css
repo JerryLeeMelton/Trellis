@@ -1154,11 +1154,23 @@ input:focus {
 
 /* Reacteroids Game Styles ============================= */
 .reacteroids-game-wrapper {
-  width: 100%;
-  /* max-width: 900px; */
+  width: 90%;
   margin: 0 auto;
+  margin-bottom: 3rem;
 }
 .reacteroids-game-wrapper canvas {
   width: 100%;
   height: auto;
+}
+
+.reacteroids-explainer-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.reacteroids-explainer-text p {
+  display: flex;
+  margin-bottom: 0;
+  font-size: 1rem;
+  font-style: italic;
 }
