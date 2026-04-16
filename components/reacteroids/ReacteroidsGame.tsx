@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useRef, useEffect, useCallback } from "react"
+import React, { useRef, useEffect, useCallback, useState } from "react"
 import {
   createGameState,
   createKeyState,
@@ -46,6 +46,7 @@ const ReacteroidsGame: React.FC<ReacterroidsGameProps> = ({
   audioEnabled = false,
   audioOptions,
 }) => {
+  const [isFocused, setIsFocused] = useState(false)
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const gameStateRef = useRef<GameState | null>(null)
   const keyStateRef = useRef<KeyState>(createKeyState())
@@ -301,12 +302,14 @@ const ReacteroidsGame: React.FC<ReacterroidsGameProps> = ({
 
   const handleContainerClick = useCallback(() => {
     focusedRef.current = true
+    setIsFocused(true)
     containerRef.current?.focus()
     audioRef.current?.preload()
   }, [])
 
   const handleBlur = useCallback(() => {
     focusedRef.current = false
+    setIsFocused(false)
     const keys = keyStateRef.current
     keys.left = false
     keys.right = false
@@ -317,6 +320,7 @@ const ReacteroidsGame: React.FC<ReacterroidsGameProps> = ({
 
   const handleFocus = useCallback(() => {
     focusedRef.current = true
+    setIsFocused(true)
   }, [])
 
   return (
@@ -332,9 +336,13 @@ const ReacteroidsGame: React.FC<ReacterroidsGameProps> = ({
         cursor: "crosshair",
         display: "block",
         lineHeight: 0,
-        border: "1px solid rgba(255, 255, 255, 0.2)",
+        border: isFocused
+          ? "1px solid var(--accent-main)"
+          : "1px solid rgba(255, 255, 255, 0.2)",
+        boxShadow: isFocused ? "0 0 8px var(--accent-main)" : "none",
         borderRadius: "4px",
         overflow: "hidden",
+        transition: "border-color 0.15s ease, box-shadow 0.15s ease",
         ...style,
       }}
     >
