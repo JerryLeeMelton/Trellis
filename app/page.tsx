@@ -22,7 +22,11 @@ export default function Home() {
             <AnimH1>
               Hello! I'm <span className="text-accent-main">Jerry</span>.
             </AnimH1>
-            <AnimH4>Full-Stack Developer based in Portland, Oregon.</AnimH4>
+            {/* <AnimH4>Software Developer based in Portland, Oregon.</AnimH4> */}
+            <AnimP className="intro-text">
+              I'm a full-stack developer with a strong background in design
+              specializing in the front-end.
+            </AnimP>
             <AnimP className="intro-text">
               I live to make things. I use my deveopment skills along with my
               eye for design to make beautiful, functional software.
