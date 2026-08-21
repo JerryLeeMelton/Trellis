@@ -7,6 +7,14 @@ import {
 } from "@/components/animationComponents/AnimatedComponents"
 import { notFound } from "next/navigation"
 
+// Every project is known at build time, so prerender them all as static HTML
+// instead of invoking a server function on each request.
+export function generateStaticParams() {
+  return Object.keys(projectContent)
+    .filter((projectName) => projectName in projectCardData)
+    .map((projectName) => ({ projectName }))
+}
+
 export async function generateMetadata({
   params,
 }: {
@@ -18,11 +26,7 @@ export async function generateMetadata({
   return {
     title: project.title,
     description: project.description,
-    openGraph: {
-      title: `${project.title} — Jerry Lee Melton`,
-      description: project.description,
-      url: `/projects/${projectName}`,
-    },
+    alternates: { canonical: `/projects/${projectName}` },
   }
 }
 

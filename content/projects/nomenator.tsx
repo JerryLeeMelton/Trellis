@@ -10,8 +10,8 @@ export default function NomenatorContent({ tags }: ProjectContentProps) {
         src="/images/casestudies/nomenator/Nomenator_Portfolio_HeroImage_cropped.webp"
         alt="Nomenator file renamer application"
         className="project-page-hero-image"
-        width={1200}
-        height={630}
+        width={1961}
+        height={1336}
       />
       <div className="project-card-tags-container">
         <SVGIcon name="tag" size={22} />
@@ -47,8 +47,8 @@ export default function NomenatorContent({ tags }: ProjectContentProps) {
       <Image
         src="/images/casestudies/nomenator/old_ui_example.webp"
         alt="Examples of outdated file renamer UI designs"
-        width={1200}
-        height={800}
+        width={1600}
+        height={1000}
       />
       <div className="project-page-image-caption">
         Examples of outdated UI design
@@ -94,8 +94,8 @@ export default function NomenatorContent({ tags }: ProjectContentProps) {
       <Image
         src="/images/casestudies/nomenator/nomenator_main_screen.webp"
         alt="Nomenator main interface screen"
-        width={1200}
-        height={800}
+        width={1779}
+        height={1154}
       />
       <div className="project-page-image-caption">Nomenator UI</div>
       <p>

@@ -11,12 +11,7 @@ export const metadata: Metadata = {
   title: "About",
   description:
     "Learn more about Jerry Lee Melton — full stack developer, cat dad, and Portland local.",
-  openGraph: {
-    title: "About — Jerry Lee Melton",
-    description:
-      "Learn more about Jerry Lee Melton — full stack developer, cat dad, and Portland local.",
-    url: "/about",
-  },
+  alternates: { canonical: "/about" },
 }
 
 export default function About() {
@@ -29,25 +24,29 @@ export default function About() {
       <AnimDiv className="about-content-container">
         <div className="about-text-container">
           <p>
-            I'm Jerry Lee Melton, a creative software engineer and designer. I'm
+            I&apos;m Jerry Lee Melton, a creative software engineer and designer. I&apos;m
             from Los Angeles, CA, but I currently live in Portland, OR with my
             wife and our three cats.
           </p>
           <p>
-            I've been designing things for over a decade and writing code
-            professionally for over three years, so I'm equally likely to have
-            excessively strong opinons about typefaces as I am about Typescript
+            I&apos;ve been designing things for over a decade and writing code
+            professionally for over three years, so I&apos;m equally likely to have
+            excessively strong opinions about typefaces as I am about Typescript
             generics. I work primarily with React, Typescript, and Go, and I
             believe that good design is the difference between software that
             people love and software that people merely tolerate.
           </p>
           <p>
-            When I'm not glued to my computer coding, I love playing one of my
+            When I&apos;m not glued to my computer coding, I love playing one of my
             ten guitars, photography, cooking, and playing entirely too much
             Magic the Gathering.
           </p>
           <div className="about-social-links-container">
-            <Link href="/resume" target="_blank" rel="noopener noreferrer">
+            <Link
+              href="/resume/JerryLeeMelton_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <SVGIcon name="file" size={19} />
               Resume
             </Link>
@@ -93,7 +92,7 @@ export default function About() {
             src="/images/hank_001_fullSize.webp"
             alt="Hank"
             width={300}
-            height={300}
+            height={400}
             className="cat-image img-zoom"
           />
           <p className="cat-pic-label">Hank</p>
@@ -103,7 +102,7 @@ export default function About() {
             src="/images/josie_001_fullSize.webp"
             alt="Josie"
             width={300}
-            height={300}
+            height={400}
             className="cat-image img-zoom"
           />
           <p className="cat-pic-label">Josie</p>
@@ -113,7 +112,7 @@ export default function About() {
             src="/images/dorian_001_fullSize.webp"
             alt="Dorian"
             width={300}
-            height={300}
+            height={400}
             className="cat-image img-zoom"
           />
           <p className="cat-pic-label">Dorian</p>

@@ -11,6 +11,11 @@ import SkillsCard from "@/components/cards/SkillsCard"
 import SVGIcon from "@/components/svg/SVGIcon"
 import Image from "next/image"
 import Link from "next/link"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+}
 
 export default function Home() {
   return (
@@ -20,11 +25,11 @@ export default function Home() {
         <div className="intro-text-and-hero-image-container">
           <div className="intro-text-container">
             <AnimH1>
-              Hello! I'm <span className="text-accent-main">Jerry</span>.
+              Hello! I&apos;m <span className="text-accent-main">Jerry</span>.
             </AnimH1>
             <AnimH4>Full-Stack Developer based in Portland, Oregon.</AnimH4>
             <AnimP className="intro-text">
-              I live to make things. I use my deveopment skills along with my
+              I live to make things. I use my development skills along with my
               eye for design to make beautiful, functional websites.
             </AnimP>
             {/* Resume & Social Links */}

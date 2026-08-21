@@ -82,6 +82,8 @@ export default function ContactForm() {
               type="text"
               id="name"
               placeholder="Name"
+              maxLength={100}
+              required
               value={name}
               onChange={(e) => setName(e.target.value)}
             />
@@ -90,6 +92,8 @@ export default function ContactForm() {
               type="email"
               id="email"
               placeholder="Email"
+              maxLength={254}
+              required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
@@ -99,6 +103,8 @@ export default function ContactForm() {
             <textarea
               id="message"
               placeholder="Your message here..."
+              maxLength={5000}
+              required
               value={message}
               onChange={(e) => setMessage(e.target.value)}
             />

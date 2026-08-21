@@ -1,12 +1,13 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
+  title: "Blog",
   robots: { index: false },
 }
 
 export default function Blog() {
   return (
-    <section className="main-content-container">
+    <main id="main-content" className="main-content-container">
       <h1>Blog</h1>
       <div className="blog-content-container">
         <p>
@@ -14,6 +15,6 @@ export default function Blog() {
           updates!
         </p>
       </div>
-    </section>
+    </main>
   )
 }

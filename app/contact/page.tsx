@@ -5,12 +5,7 @@ export const metadata: Metadata = {
   title: "Contact",
   description:
     "Get in touch with Jerry Lee Melton. Send a message directly from the site.",
-  openGraph: {
-    title: "Contact — Jerry Lee Melton",
-    description:
-      "Get in touch with Jerry Lee Melton. Send a message directly from the site.",
-    url: "/contact",
-  },
+  alternates: { canonical: "/contact" },
 }
 
 export default function ContactPage() {

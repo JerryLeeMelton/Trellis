@@ -1,5 +1,3 @@
-import next from "next"
-
 interface TagElementProps {
   tagName: string
 }

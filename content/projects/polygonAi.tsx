@@ -11,8 +11,8 @@ export default function PolygonAiContent({ tags }: ProjectContentProps) {
         src="/images/casestudies/polygon/polygon_casestudy_hero_cropped.webp"
         alt="Polygon AI main interface"
         className="project-page-hero-image"
-        width={1200}
-        height={630}
+        width={1961}
+        height={1196}
       />
       <div className="project-card-tags-container">
         <SVGIcon name="tag" size={22} />
@@ -52,8 +52,8 @@ export default function PolygonAiContent({ tags }: ProjectContentProps) {
       <Image
         src="/images/casestudies/polygon/pipsqueakpro_main_screen.webp"
         alt="Pipsqueak Pro Main Screen"
-        width={1200}
-        height={800}
+        width={1961}
+        height={1196}
       />
       <div className="project-page-image-caption">
         Pipsqueak Pro main interface screen before I joined the team
@@ -72,8 +72,8 @@ export default function PolygonAiContent({ tags }: ProjectContentProps) {
       <Image
         src="/images/casestudies/polygon/pip_vs_poly_logos.webp"
         alt="Polygon vs Pipsqueak Logos"
-        width={800}
-        height={400}
+        width={1961}
+        height={1833}
       />
       <div className="project-page-image-caption">
         Old Pipsqueak Pro logo vs new Polygon AI logo
@@ -89,8 +89,8 @@ export default function PolygonAiContent({ tags }: ProjectContentProps) {
       <Image
         src="/images/casestudies/polygon/polygon_wireframes.webp"
         alt="Polygon Wireframes"
-        width={1200}
-        height={800}
+        width={1961}
+        height={1196}
       />
       <div className="project-page-image-caption">
         Wireframe sketches for the Polygon AI interface redesign
@@ -138,8 +138,8 @@ export default function PolygonAiContent({ tags }: ProjectContentProps) {
       <Image
         src="/images/casestudies/polygon/polygon_main_screen.webp"
         alt="Polygon AI final main screen"
-        width={1200}
-        height={800}
+        width={1961}
+        height={1196}
       />
       <div className="project-page-image-caption">
         Current Polygon AI main user interface

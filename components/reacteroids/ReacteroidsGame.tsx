@@ -50,7 +50,6 @@ const ReacteroidsGame: React.FC<ReacterroidsGameProps> = ({
   const gameStateRef = useRef<GameState | null>(null)
   const keyStateRef = useRef<KeyState>(createKeyState())
   const rafRef = useRef<number>(0)
-  const lastTimeRef = useRef<number>(0)
   const containerRef = useRef<HTMLDivElement>(null)
   const focusedRef = useRef<boolean>(false)
   const highScoresRef = useRef<HighScore[]>([])
@@ -60,8 +59,13 @@ const ReacteroidsGame: React.FC<ReacterroidsGameProps> = ({
   const audioRef = useRef<AudioManager | null>(null)
   const crtOptionsRef = useRef(crtOptions)
   const audioOptionsRef = useRef(audioOptions)
-  crtOptionsRef.current = crtOptions
-  audioOptionsRef.current = audioOptions
+
+  // Kept in a ref so changing these props does not tear down and restart the
+  // game. Synced in an effect rather than during render, which React forbids.
+  useEffect(() => {
+    crtOptionsRef.current = crtOptions
+    audioOptionsRef.current = audioOptions
+  }, [crtOptions, audioOptions])
 
   const loadHighScores = useCallback(async () => {
     const scores = await fetchHighScores(scoresApiUrl)
@@ -127,15 +131,29 @@ const ReacteroidsGame: React.FC<ReacterroidsGameProps> = ({
     state.events.length = 0
   }, [])
 
-  const gameLoop = useCallback(
-    (timestamp: number) => {
-      const canvas = canvasRef.current
-      const outputCtx = canvas?.getContext("2d")
-      const state = gameStateRef.current
-      if (!canvas || !outputCtx || !state) return
+  useEffect(() => {
+    const canvas = canvasRef.current
+    const outputCtx = canvas?.getContext("2d")
+    if (!canvas || !outputCtx) return
 
-      const dt = Math.min((timestamp - lastTimeRef.current) / 1000, 0.05)
-      lastTimeRef.current = timestamp
+    const state = createGameState(width, height)
+    gameStateRef.current = state
+    const crt = crtEnabled
+      ? new CRTFilter(width, height, crtOptionsRef.current)
+      : null
+    const audio = audioEnabled
+      ? new AudioManager(audioOptionsRef.current)
+      : null
+    crtFilterRef.current = crt
+    audioRef.current = audio
+    loadHighScores()
+
+    // Declared inside the effect so the animation frame chain always calls
+    // this instance rather than a value captured from an earlier render.
+    let lastTime = performance.now()
+    const loop = (timestamp: number) => {
+      const dt = Math.min((timestamp - lastTime) / 1000, 0.05)
+      lastTime = timestamp
 
       if (state.phase === GamePhase.GameOver) {
         gameOverTimerRef.current += dt
@@ -148,37 +166,17 @@ const ReacteroidsGame: React.FC<ReacterroidsGameProps> = ({
         highScores: highScoresRef.current,
       }
 
-      const crt = crtFilterRef.current
       if (crt) {
-        const gameCtx = crt.getGameContext()
-        render(gameCtx, state, renderCtx)
+        render(crt.getGameContext(), state, renderCtx)
         crt.apply(outputCtx)
       } else {
         render(outputCtx, state, renderCtx)
       }
 
-      rafRef.current = requestAnimationFrame(gameLoop)
-    },
-    [processAudioEvents],
-  )
+      rafRef.current = requestAnimationFrame(loop)
+    }
 
-  useEffect(() => {
-    const canvas = canvasRef.current
-    if (!canvas) return
-
-    gameStateRef.current = createGameState(width, height)
-    const crt = crtEnabled
-      ? new CRTFilter(width, height, crtOptionsRef.current)
-      : null
-    const audio = audioEnabled
-      ? new AudioManager(audioOptionsRef.current)
-      : null
-    crtFilterRef.current = crt
-    audioRef.current = audio
-    loadHighScores()
-
-    lastTimeRef.current = performance.now()
-    rafRef.current = requestAnimationFrame(gameLoop)
+    rafRef.current = requestAnimationFrame(loop)
 
     return () => {
       cancelAnimationFrame(rafRef.current)
@@ -187,7 +185,14 @@ const ReacteroidsGame: React.FC<ReacterroidsGameProps> = ({
       crtFilterRef.current = null
       audioRef.current = null
     }
-  }, [width, height, gameLoop, loadHighScores, crtEnabled, audioEnabled])
+  }, [
+    width,
+    height,
+    loadHighScores,
+    processAudioEvents,
+    crtEnabled,
+    audioEnabled,
+  ])
 
   // Keyboard handlers
   useEffect(() => {
