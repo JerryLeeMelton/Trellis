@@ -27,10 +27,14 @@ export default function Home() {
             <AnimH1>
               Hello! I&apos;m <span className="text-accent-main">Jerry</span>.
             </AnimH1>
-            <AnimH4>Full-Stack Developer based in Portland, Oregon.</AnimH4>
+            {/* <AnimH4>Software Developer based in Portland, Oregon.</AnimH4> */}
+            <AnimP className="intro-text">
+              I&apos;m a full-stack developer with a strong background in design
+              specializing in the front-end.
+            </AnimP>
             <AnimP className="intro-text">
               I live to make things. I use my development skills along with my
-              eye for design to make beautiful, functional websites.
+              eye for design to make beautiful, functional software.
             </AnimP>
             {/* Resume & Social Links */}
             <AnimDiv className="intro-social-links-container">

@@ -16,12 +16,12 @@ export default function ProjectCard({ projectName }: ProjectCardProps) {
       href={`/projects/${projectName}`}
       className="project-card-container project-card-link"
     >
-      <div>
+      <div className="project-card-image-container">
         <Image
           src={projectData.image}
           alt={`Image for ${projectName}`}
-          width={400}
-          height={200}
+          width={projectData.imageWidth}
+          height={projectData.imageHeight}
           sizes="(max-width: 768px) 100vw, 50vw"
           className="project-card-image"
         />

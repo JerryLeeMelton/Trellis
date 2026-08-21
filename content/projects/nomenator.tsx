@@ -2,6 +2,7 @@ import SVGIcon from "@/components/svg/SVGIcon"
 import TagElement from "@/components/cards/TagElement"
 import Image from "next/image"
 import type { ProjectContentProps } from "@/content/projects"
+import Link from "next/link"
 
 export default function NomenatorContent({ tags }: ProjectContentProps) {
   return (
@@ -54,8 +55,8 @@ export default function NomenatorContent({ tags }: ProjectContentProps) {
         Examples of outdated UI design
       </div>
       <p className="project-page-intro-end">
-        When working on Nomenator, my main goal was to create something with
-        all of the power and utility of those older applications, but with more
+        When working on Nomenator, my main goal was to create something with all
+        of the power and utility of those older applications, but with more
         modern design sensibilities. I wanted the user experience to be as
         seamless and refined as possible.
       </p>
@@ -160,6 +161,11 @@ export default function NomenatorContent({ tags }: ProjectContentProps) {
           would be, in my opinion, a game changer.
         </li>
       </ul>
+      <div>
+        <Link href="/projects" className="jlm-link-button">
+          Back to Projects Page
+        </Link>
+      </div>
     </div>
   )
 }
