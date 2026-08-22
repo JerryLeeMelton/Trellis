@@ -15,22 +15,14 @@ export default function ReacteroidsContent({ tags }: ProjectContentProps) {
       </div>
 
       <p>
-        <span className="project-page-label">Challenge:</span>
-        Classic arcade games are deceptively simple. Asteroids looks like a few
-        triangles bouncing around a screen, but underneath it&apos;s a tightly
-        tuned system of physics, collision detection, spawning logic, and game
-        feel. I wanted to build it from scratch — no game engines, no physics
-        libraries — to really understand what makes it tick.
-      </p>
-      <p className="project-page-intro-end">
-        <span className="project-page-label">Solution:</span>
-        Reacteroids is a fully featured clone of the 1979 Atari arcade classic,
-        built entirely with React, TypeScript, and the Canvas API. It lives
-        right here in this portfolio — go ahead and give it a try below.
+        For this project, I really wanted to build something fun for my
+        portfolio website. While I've dabbled in making things with game engines
+        before (Unity and Godot), for this project I wanted to really get into
+        the weeds and build the game from scratch.
       </p>
 
       <div className="reacteroids-explainer-text">
-        <p>Click into the game to focus it and start playing!</p>
+        <p>Click the game screen to focus it and start playing!</p>
       </div>
       <ReacteroidsGame
         crtOptions={{
@@ -44,85 +36,56 @@ export default function ReacteroidsContent({ tags }: ProjectContentProps) {
         className="reacteroids-game-wrapper"
       />
 
-      <h4>Zero Dependencies</h4>
+      <h4>No Dependencies</h4>
       <p>
-        The core constraint I set for this project was that the game logic had
-        to be entirely dependency-free. No libraries for physics, no game engine
-        scaffolding — just TypeScript, the Canvas API, and a game loop driven by{" "}
-        <code>requestAnimationFrame</code>. Everything from asteroid spawning to
-        bullet collision to the saucer AI is implemented by hand.
+        In addion to not using a game engine, another constraint I placed on
+        this project was that it shouldn't require any dependencies. I wanted to
+        see how much you can do with just the tools that the browser provides.
       </p>
       <p className="project-page-intro-end">
-        This turned out to be one of the most educational decisions I made.
-        There&apos;s a big difference between understanding game development in
-        theory and actually having to implement momentum, wrap-around edges, and
-        multi-stage asteroid splitting yourself.
+        This turned out to be super educational. It's amazing what you can do
+        with just Typescript and the Canvas API!
       </p>
 
       <h4>Game Architecture</h4>
-      <p>
-        The engine is structured around a pure <code>updateGame</code> function
-        that takes the current game state and a delta time value and returns the
-        next state. Rendering is handled separately in a dedicated renderer
-        module, keeping game logic and display concerns cleanly separated. The
-        React component is responsible only for running the game loop and wiring
-        up keyboard input — it doesn&apos;t know anything about how the game
-        works internally.
+      <p className="project-page-intro-end">
+        Taking cues from my experience using game engines like Godot or Unity, I
+        structured the game around an <code>updateGame</code> function that
+        takes the current game state and a delta time value and returns the next
+        game state. Rendering is handled separately in a dedicated renderer
+        module, keeping the logic for the game and rendering neatly separated.
+        The React component that houses the game is only responsible for running
+        the game loop and handling keyboard input. It doesn't know and doesn't
+        care about how the game works internally.
       </p>
-      <ul className="project-page-intro-end">
-        <li>
-          <strong>Game Engine:</strong> Handles all simulation — ship movement,
-          asteroid physics, bullet lifetime, saucer spawning and AI, collision
-          detection, scoring, and wave progression.
-        </li>
-        <li>
-          <strong>Renderer:</strong> Draws every frame to an offscreen canvas
-          context, keeping visual concerns isolated from game logic.
-        </li>
-        <li>
-          <strong>CRT Filter:</strong> A multi-pass post-processing pipeline
-          that composites bloom, aperture grille, scanlines, and analog noise
-          over the rendered frame before displaying it. The effect is inspired
-          by classic Trinitron RGB monitors.
-        </li>
-        <li>
-          <strong>Score System:</strong> Persists high scores to localStorage
-          with support for a remote API endpoint if one is configured. Players
-          can enter a three-letter name in classic arcade fashion.
-        </li>
-      </ul>
 
-      <h4>The CRT Effect</h4>
+      <h4>CRT Effect</h4>
       <p>
-        One of the most satisfying parts of this project was building the CRT
-        post-processing filter. Modern Asteroids recreations often just render
-        clean vector lines — but those arcade cabinets had a specific look that
-        came from the phosphor glow and the imperfections of the display
-        hardware. I wanted to capture that.
+        One my favorite parts of this project was building the CRT filter.
+        Growing up my folks would take me and my brother to an arcade with an
+        extensive collection of retro games. The CRT displays that were standard
+        at the time gave all of those old games a certain look and feel that
+        I've always loved so I wanted to capture a bit of that magic in this
+        project.
       </p>
       <p className="project-page-intro-end">
-        The filter runs as a series of canvas compositing passes: the game
-        renders to an offscreen buffer at full resolution, then bloom is
-        computed at quarter resolution and blended back, then aperture grille
-        and scanline overlay patterns are applied, and finally a frame of
-        animated noise adds the analog static texture. The whole pipeline runs
-        every frame at 60fps without a noticeable hit to performance.
+        The final filter runes a series of canvas compositing passes. The game
+        itself renders to a buffer at full resolution, then bloom is applied to
+        the image at quarter resolution and blended in, with the aperture grille
+        and scanline overlays being applied after that. Finally, noise is
+        applied to each frame of animation to add in one last bit of analog grit
+        to the image. The whole stack is applied every frame at 60FPS and runs
+        silky smooth.
       </p>
 
       <h4>Game Feel</h4>
       <p>
-        The original Asteroids has a very specific feel to it — the ship drifts
-        with real momentum, bullets have a limited lifetime that forces you to
-        be accurate, and the UFO adds just enough pressure without being unfair.
-        Getting the numbers right took a lot of tuning. Things like rotation
-        speed, thrust acceleration, drag, bullet speed, and asteroid velocity
-        all had to be balanced against each other until it felt right.
-      </p>
-      <p>
-        The game also includes a hyperspace jump, extra lives at score
-        milestones, wave announcements, and a proper game over flow — all the
-        details that made the original feel complete rather than like a tech
-        demo.
+        The original Asteroids, like any classic arcade game, has a really great
+        and really specific game feel. Things like the ship's drifting momentum,
+        the speed and lifetime of bullets, and the way that asteroids break up
+        when hit all required lots of tuning to get right. It may not be 100%
+        accurate to the original, but I'm really happy with the balance that I
+        landed on for this project.
       </p>
       <div>
         <Link href="/projects" className="jlm-link-button">
