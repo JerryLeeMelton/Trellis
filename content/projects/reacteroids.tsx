@@ -16,7 +16,7 @@ export default function ReacteroidsContent({ tags }: ProjectContentProps) {
 
       <p>
         For this project, I really wanted to build something fun for my
-        portfolio website. While I've dabbled in making things with game engines
+        portfolio website. While I&apos;ve dabbled in making things with game engines
         before (Unity and Godot), for this project I wanted to really get into
         the weeds and build the game from scratch.
       </p>
@@ -39,11 +39,11 @@ export default function ReacteroidsContent({ tags }: ProjectContentProps) {
       <h4>No Dependencies</h4>
       <p>
         In addion to not using a game engine, another constraint I placed on
-        this project was that it shouldn't require any dependencies. I wanted to
+        this project was that it shouldn&apos;t require any dependencies. I wanted to
         see how much you can do with just the tools that the browser provides.
       </p>
       <p className="project-page-intro-end">
-        This turned out to be super educational. It's amazing what you can do
+        This turned out to be super educational. It&apos;s amazing what you can do
         with just Typescript and the Canvas API!
       </p>
 
@@ -55,7 +55,7 @@ export default function ReacteroidsContent({ tags }: ProjectContentProps) {
         game state. Rendering is handled separately in a dedicated renderer
         module, keeping the logic for the game and rendering neatly separated.
         The React component that houses the game is only responsible for running
-        the game loop and handling keyboard input. It doesn't know and doesn't
+        the game loop and handling keyboard input. It doesn&apos;t know and doesn&apos;t
         care about how the game works internally.
       </p>
 
@@ -65,7 +65,7 @@ export default function ReacteroidsContent({ tags }: ProjectContentProps) {
         Growing up my folks would take me and my brother to an arcade with an
         extensive collection of retro games. The CRT displays that were standard
         at the time gave all of those old games a certain look and feel that
-        I've always loved so I wanted to capture a bit of that magic in this
+        I&apos;ve always loved so I wanted to capture a bit of that magic in this
         project.
       </p>
       <p className="project-page-intro-end">
@@ -81,10 +81,10 @@ export default function ReacteroidsContent({ tags }: ProjectContentProps) {
       <h4>Game Feel</h4>
       <p className="project-page-intro-end">
         The original Asteroids, like any classic arcade game, has a really great
-        and really specific game feel. Things like the ship's drifting momentum,
+        and really specific game feel. Things like the ship&apos;s drifting momentum,
         the speed and lifetime of bullets, and the way that asteroids break up
         when hit all required lots of tuning to get right. It may not be 100%
-        accurate to the original, but I'm really happy with the balance that I
+        accurate to the original, but I&apos;m really happy with the balance that I
         landed on for this project.
       </p>
       <div>
