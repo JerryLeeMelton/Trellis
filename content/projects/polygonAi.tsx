@@ -144,7 +144,7 @@ export default function PolygonAiContent({ tags }: ProjectContentProps) {
       <div className="project-page-image-caption">
         Current Polygon AI main user interface
       </div>
-      <p>
+      <p className="project-page-intro-end">
         Joining Rewire early in its development allowed me to make significant
         and impactful contributions to Polygon AI. I am extremely proud of my
         achievements with Polygon and am eager to apply the lessons learned to

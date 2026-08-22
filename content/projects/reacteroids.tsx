@@ -79,7 +79,7 @@ export default function ReacteroidsContent({ tags }: ProjectContentProps) {
       </p>
 
       <h4>Game Feel</h4>
-      <p>
+      <p className="project-page-intro-end">
         The original Asteroids, like any classic arcade game, has a really great
         and really specific game feel. Things like the ship's drifting momentum,
         the speed and lifetime of bullets, and the way that asteroids break up

@@ -1,11 +1,21 @@
 import SVGIcon from "@/components/svg/SVGIcon"
 import TagElement from "@/components/cards/TagElement"
+import Image from "next/image"
 import type { ProjectContentProps } from "@/content/projects"
 import Link from "next/link"
 
 export default function TrellisContent({ tags }: ProjectContentProps) {
   return (
     <div className="project-page-content">
+      <p>This is the project for the site you're currently on right now!</p>
+      <Image
+        src="/images/casestudies/trellis/trellis_hero.webp"
+        alt="Polygon AI main interface"
+        className="project-page-hero-image"
+        width={1961}
+        height={1196}
+      />
+
       <div className="project-card-tags-container">
         <SVGIcon name="tag" size={22} />
         {tags.map((tag) => (
@@ -25,93 +35,32 @@ export default function TrellisContent({ tags }: ProjectContentProps) {
       </div>
 
       <p>
-        <span className="project-page-label">Challenge:</span>
-        Building a personal portfolio is one of those projects that somehow
-        always ends up more ambitious than you planned. The goal wasn&apos;t
-        just to make something that listed my work — I wanted a site that felt
-        polished and modern, with real personality. Something I&apos;d actually
-        be proud to send to people.
-      </p>
-      <p className="project-page-intro-end">
-        <span className="project-page-label">Solution:</span>
-        Trellis is the site you&apos;re looking at right now. It&apos;s built on
-        Next.js with React and TypeScript, styled entirely with CSS (no
-        component library shortcuts), and brought to life with fluid UI
-        animations from Motion. Contact form handling is done through Resend.
-      </p>
-
-      <h4>Why Build It from Scratch?</h4>
-      <p>
-        There are plenty of portfolio templates out there, and I&apos;ve seen my
-        share of them. Most look fine, but they all end up looking like each
-        other. I wanted something that felt custom — and honestly, the process
-        of designing and building it from the ground up is itself a better
-        demonstration of my abilities than any template ever could be.
-      </p>
-      <p className="project-page-intro-end">
-        Starting from a blank canvas also meant I got to make every decision
-        deliberately: the layout, the color system, the typography, the
-        interactions. Nothing is there by accident.
+        I'm always very particular about my personal portfolio website, so I
+        wanted to be sure to build it from scratch. There's a lot of high
+        quality templates out there but I always wind up having to make more
+        manual adjustments than I would like and the way that they're structured
+        is never really to my liking. I wanted the site to be something I was
+        proud to show off, so building it from the ground up seemed like a
+        no-brainer in this situation.
       </p>
 
       <h4>Tech Stack</h4>
-      <p>
-        The stack for Trellis was chosen to keep things modern without
-        overengineering:
-      </p>
-      <ul className="project-page-intro-end">
-        <li>
-          <strong>Next.js &amp; React:</strong> The latest versions, which gave
-          me a great opportunity to dig into some of the newer patterns and
-          conventions that have emerged in the React ecosystem.
-        </li>
-        <li>
-          <strong>TypeScript:</strong> Type safety across the whole codebase.
-          Given the number of interconnected pieces — project data, content
-          components, routing — TypeScript kept things from getting messy.
-        </li>
-        <li>
-          <strong>Motion:</strong> Handling animations for page transitions,
-          hover effects, and UI flourishes. Getting these to feel smooth and
-          natural rather than distracting was one of the more enjoyable
-          challenges of the project.
-        </li>
-        <li>
-          <strong>Resend:</strong> A clean, developer-friendly API for handling
-          contact form email delivery without needing a backend.
-        </li>
-        <li>
-          <strong>Plain CSS:</strong> No Tailwind or CSS-in-JS here — just
-          well-organized stylesheets. Writing CSS by hand gives you a level of
-          precision and intentionality that utility classes can sometimes paper
-          over.
-        </li>
-      </ul>
 
-      <h4>Design Approach</h4>
       <p>
-        The visual design went through several rounds before landing where it is
-        now. I wanted a clean, dark aesthetic with enough visual interest to
-        feel considered — not just another dark-mode dev portfolio. Typography
-        does a lot of heavy lifting here, and the color palette is intentionally
-        restrained so that the work can speak for itself.
+        For this project I wanted to keep things modern without introducing
+        unnecessary bloat. I wound up deciding on Next.js using Typescript. I've
+        been really enjoying the more self-contained nature of Next.js and just
+        the overall structure of its projects, so I wanted an excuse to work
+        more with it having come from working heavily with vanilla React at my
+        previous job.
       </p>
       <p className="project-page-intro-end">
-        The interactive elements were important to get right. Hover states, card
-        animations, and page transitions all needed to feel responsive and
-        intentional without being overdone. The goal was always to enhance the
-        experience, not show off for its own sake.
+        In addition to Next.js, I decided to include MOtion for handling
+        animations for page transitions, hover effects, and other UI niceties. I
+        also included Resend as a clean, out of the box way to handle my contact
+        form email delivery.
       </p>
 
-      <h4>Project Pages</h4>
-      <p>
-        One of the things I&apos;m most happy with is how the project pages
-        work. Rather than static markdown files, each project&apos;s content is
-        a full React component — which means any project can include whatever it
-        needs to best tell its story. Some pages are primarily text and images;
-        others (like Reacteroids) embed a fully interactive experience right on
-        the page.
-      </p>
       <div>
         <Link href="/projects" className="jlm-link-button">
           Back to Projects Page
