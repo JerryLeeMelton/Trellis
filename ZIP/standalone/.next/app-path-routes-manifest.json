@@ -1,0 +1,14 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/about/page": "/about",
+  "/api/asteroids/scores/route": "/api/asteroids/scores",
+  "/api/contact/route": "/api/contact",
+  "/blog/page": "/blog",
+  "/contact/page": "/contact",
+  "/favicon.ico/route": "/favicon.ico",
+  "/opengraph-image/route": "/opengraph-image",
+  "/page": "/",
+  "/projects/[projectName]/page": "/projects/[projectName]",
+  "/projects/page": "/projects"
+}
